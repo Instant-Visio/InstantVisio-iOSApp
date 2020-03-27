@@ -2,22 +2,14 @@ import { getData } from '../../global/utils/LocalStorageIO';
 import request from 'superagent';
 
 
-async function call(meta, token, root) {
+async function call(meta) {
   const method = meta.API_METHOD ? meta.API_METHOD : 'GET';
 
-  let lang = await getData('lang');
-  if (!lang) {
-    lang = 'fr';
-  }
-
-  const URL = `${meta.API_CALL}?lang=${lang}`;
+  const URL = meta.API_CALL;
 
   let req = request(method, URL);
 
-  if (token && root !== 'login') {
-    req.set('x-auth-token', token);
-    req.set('canal', 'mobile');
-  }
+
   if (meta.API_PAYLOAD) {
     req = req.send(meta.API_PAYLOAD);
   }
@@ -29,12 +21,10 @@ async function call(meta, token, root) {
 
 
 export default store => next => action => {
-  const token = store.getState().authenticationreducer.get('token');
-  const root = store.getState().rootreducer.get('root');
 
   if (action.meta && action.meta.API_CALL) {
 
-    call(action.meta, token, root).then(result => {
+    call(action.meta).then(result => {
       result.req.timeout({
         deadline: 50000, // allow 5 minute for the file to finish loading.
       })
@@ -50,9 +40,6 @@ export default store => next => action => {
           });
         })
         .then(res => {
-          if (res.headers.token) {
-            next(changeAppToken(res.headers.token));
-          }
           next({
             type: action.meta.API_SUCCESS,
             result: res.body
