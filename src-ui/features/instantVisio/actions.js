@@ -1,14 +1,6 @@
-// env Config if needed
-import Config from '../../global/config'
+import {onChange} from './../../global/utils';
+import {
+  ON_CHANGE
+} from './types';
 
-// types to use
-import { EXAMPLE_TYPE } from './types';
-
-// actions to use
-export const exampleAction = () => {
-  const resp = {
-    type: EXAMPLE_TYPE,
-    payload: 'test',
-  };
-  return resp;
-};
+export const onChangeAction = onChange(ON_CHANGE);

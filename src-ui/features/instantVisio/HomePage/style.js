@@ -27,5 +27,9 @@ export default StyleSheet.create({
   text: {
     fontFamily: vars.RobotoMed,
     fontSize:vars.widthUnit * 8
+  },
+  ApiModalLoader: {
+    flex: 1,
+    backgroundColor: 'rgba(255,255,255,0.7)',
   }
 });

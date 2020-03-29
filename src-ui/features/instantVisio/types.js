@@ -1,1 +1,6 @@
-export const EXAMPLE_TYPE = 'example_type';
+// feature Prefix
+const prefix = 'visio::';
+
+export const ON_CHANGE = prefix.concat('on_change');
+
+

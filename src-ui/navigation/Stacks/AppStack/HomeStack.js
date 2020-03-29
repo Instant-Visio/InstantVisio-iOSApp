@@ -19,8 +19,9 @@ const HomeStack = createStackNavigator(
       backgroundColor: '#F8F9FE',
     },
     transitionConfig,
-    headerMode: 'none'    
-  },
+    headerMode: 'none',
+    initialRouteName: 'Home'    
+  }
 );
 
 export default createAppContainer(HomeStack);

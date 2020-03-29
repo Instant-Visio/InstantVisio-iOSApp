@@ -2,17 +2,19 @@ import Config from 'react-native-config';
 
 const pureRelay = tpyrc => tpyrc;
 
-const API_URL_VISIO = pureRelay(Config.API_URL_VISIO);
+const REACT_APP_APPID=pureRelay(Config.REACT_APP_APPID);
+const REACT_APP_API_KEY=pureRelay(Config.REACT_APP_API_KEY);
+const REACT_APP_AUTH_DOMAIN=pureRelay(Config.REACT_APP_AUTH_DOMAIN);
+const REACT_APP_DATABASE_URL=pureRelay(Config.REACT_APP_DATABASE_URL);
+const REACT_APP_PROJECT_ID=pureRelay(Config.REACT_APP_PROJECT_ID);
+const REACT_APP_MEASUREMENT_ID=pureRelay(Config.REACT_APP_MEASUREMENT_ID);
 
-const API_URL_GATEWAY_MAIL = pureRelay(Config.API_URL_GATEWAY_MAIL);
-
-const API_URL_GATEWAY_SMS = pureRelay(Config.API_URL_GATEWAY_SMS);
-
-const ENV = pureRelay(Config.ENV);
 
 export default {
-    API_URL_VISIO,
-    ENV,
-    API_URL_GATEWAY_MAIL,
-    API_URL_GATEWAY_SMS
+    REACT_APP_APPID,
+    REACT_APP_API_KEY,
+    REACT_APP_AUTH_DOMAIN,
+    REACT_APP_DATABASE_URL,
+    REACT_APP_PROJECT_ID,
+    REACT_APP_MEASUREMENT_ID
 };

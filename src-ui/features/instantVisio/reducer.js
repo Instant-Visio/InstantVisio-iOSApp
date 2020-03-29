@@ -1,21 +1,25 @@
 import { fromJS } from 'immutable';
 
-// types to use
-import { EXAMPLE_TYPE } from './types';
+import {
+  ON_CHANGE
+} from './types';
 
 const INITIAL_STATE = fromJS({
-  exampleObject: {
-    status: ''
+  form: {
+    Email: '',
+    PhoneNumer: '',
+    Name : ''
   }
 });
 
-// update state
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case EXAMPLE_TYPE:
+    case ON_CHANGE:
       return state.withMutations(s => {
-        s.setIn(['exampleObject', 'status'], 'status');
+        s.setIn(action.keyStore, action.value);
       });
+
+
     default:
       return state;
   }
