@@ -1,13 +1,9 @@
-import vars from 'global/vars';
-
 export {
   groupBy,
   objToList,
-  convertDate,
   precision,
   truncateString,
-  openApiModal
-
+  apiActionTypeGenerator
 };
 
 function groupBy(array, key) {
@@ -56,24 +52,6 @@ function apiActionTypeGenerator(...prefixs) {
     error: prefix.concat('_error'),
     timeout: prefix.concat('_timeout')
   };
-}
-
-function openApiModal(navigator, {
-  hasSuccesMsg, onSuccess, onError, status, message
-}) {
-  navigator.push({
-    screen: 'mbankingapp.ExceptionApiModal',
-    passProps: {
-      hasSuccesMsg,
-      onSuccess,
-      onError,
-      status,
-      message
-    },
-    navigatorStyle: {...vars.NavigatorDarkStyle},
-    animationType: 'fade',
-    overrideBackPress: true
-  });
 }
 
 

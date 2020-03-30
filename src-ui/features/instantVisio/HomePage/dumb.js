@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView, Image, TouchableOpacity,View} from 'react-native';
+import {ScrollView, Image, TouchableOpacity,View, Modal} from 'react-native';
 import {Spinner} from 'native-base';
 import {Block, Input, Text, Button} from './../../../global/components/Socles';
 import images from './../../../global/components/images';

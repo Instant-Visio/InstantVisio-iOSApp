@@ -8,7 +8,8 @@ const REACT_APP_AUTH_DOMAIN=pureRelay(Config.REACT_APP_AUTH_DOMAIN);
 const REACT_APP_DATABASE_URL=pureRelay(Config.REACT_APP_DATABASE_URL);
 const REACT_APP_PROJECT_ID=pureRelay(Config.REACT_APP_PROJECT_ID);
 const REACT_APP_MEASUREMENT_ID=pureRelay(Config.REACT_APP_MEASUREMENT_ID);
-
+ 
+console.log(Config.REACT_APP_APPID)
 
 export default {
     REACT_APP_APPID,
