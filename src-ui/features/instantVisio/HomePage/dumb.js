@@ -2,8 +2,10 @@ import React from 'react';
 import {ScrollView, Image, TouchableOpacity,View, Modal} from 'react-native';
 import {Spinner} from 'native-base';
 import {Block, Input, Text, Button} from './../../../global/components/Socles';
+import { InputCheckeremail, InputCheckersphoneNumber} from './../../../global/utils'
 import images from './../../../global/components/images';
 import vars from './../../../global/vars';
+
 import style from './style';
 
 const Dump = ({navigation, submit, error, loading, Name, PhoneNumer, Email, onChangeEmail, onChangeePhoneNumber, onChangeeName}) => (
@@ -33,32 +35,40 @@ const Dump = ({navigation, submit, error, loading, Name, PhoneNumer, Email, onCh
       <Block style={{flex: 1, marginHorizontal: vars.widthUnit * 7}}>
         <Input
           color="#333333"
-          style={{borderColor: '#333333'}}
+          style={{borderColor: error && (/^[\s]*$/.test(Name.toString())) ? 'red':'#333333'}}
           placeholderTextColor="#9FA5AA"
           placeholder="Votre nom"
           value={Name}
+          autoCapitalize = "none"
+          underlineColorAndroid='transparent'  
           onChangeText={onChangeeName}
         />
 
         <Input
           color="#333333"
-          style={{borderColor: '#333333'}}
+          style={{borderColor: error && !InputCheckersphoneNumber(PhoneNumer) ? 'red':'#333333'}}
           placeholderTextColor="#9FA5AA"
           placeholder="Numéro de téléphone de votre proche"
-          help="Optionnel si l'email est renseigné !"
+          help="Optionnel si l'email est renseigné ! ex: +21233333"
           bottomHelp
           value={PhoneNumer}
+          underlineColorAndroid='transparent'  
+          keyboardType={'phone-pad'}  
+          autoCapitalize = "none"
           onChangeText={onChangeePhoneNumber}
         />
 
         <Input
           color="#333333"
-          style={{borderColor: '#333333'}}
+          style={{borderColor: error && !InputCheckeremail(Email) ? 'red':'#333333'}}
           placeholderTextColor="#9FA5AA"
           placeholder="E-mail de votre proche"
           help="Optionnel si le numero de telephone est renseigné !"
           bottomHelp
+          autoCapitalize = "none"
           value={Email}
+          underlineColorAndroid='transparent'
+          keyboardType={'email-address'}  
           onChangeText={onChangeEmail}
         />
         <Button
@@ -75,7 +85,7 @@ const Dump = ({navigation, submit, error, loading, Name, PhoneNumer, Email, onCh
         </TouchableOpacity>
       </Block>
     </ScrollView>
-    <Modal visible={loading}>
+    <Modal transparent visible={loading}>
       <View style={[style.center, style.ApiModalLoader]}>
         <Spinner color="#e67b00" size="large" />
       </View>
