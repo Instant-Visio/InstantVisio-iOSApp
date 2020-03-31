@@ -67,7 +67,7 @@ class Smart extends Component {
                     //send sms only android
                     if(InputCheckersphoneNumber(this.props.PhoneNumer))
                     {
-                      SendSMS.send(123, this.props.PhoneNumer, "Hey.., this is the link of meeting "+ `https://instantvisio.daily.co/${this.state.videoCallId}`,
+                      SendSMS.send(123, this.props.PhoneNumer, `INSTANT VISIO : ${this.props.Name} vous invite à le joindre à un video conf merci de lien de la conf https://instantvisio.daily.co/${this.state.videoCallId}`,
                           (msg)=>{
                             console.log(msg)
                           }
