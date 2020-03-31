@@ -8,7 +8,7 @@ class Smart extends Component {
   {
     super(props);
     setTimeout(()=>{
-      this.props.navigation.navigate('InstantVisio');
+      this.props.navigation.navigate('Home');
     },2000)
   }
 

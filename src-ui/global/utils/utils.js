@@ -1,13 +1,8 @@
-import vars from 'global/vars';
-
 export {
   groupBy,
   objToList,
-  convertDate,
   precision,
-  truncateString,
-  openApiModal
-
+  truncateString
 };
 
 function groupBy(array, key) {
@@ -48,33 +43,6 @@ function truncateString(string, number) {
   return returnedString;
 }
 
-function apiActionTypeGenerator(...prefixs) {
-  const prefix = prefixs.join('');
-  return {
-    request: prefix,
-    success: prefix.concat('_success'),
-    error: prefix.concat('_error'),
-    timeout: prefix.concat('_timeout')
-  };
-}
-
-function openApiModal(navigator, {
-  hasSuccesMsg, onSuccess, onError, status, message
-}) {
-  navigator.push({
-    screen: 'mbankingapp.ExceptionApiModal',
-    passProps: {
-      hasSuccesMsg,
-      onSuccess,
-      onError,
-      status,
-      message
-    },
-    navigatorStyle: {...vars.NavigatorDarkStyle},
-    animationType: 'fade',
-    overrideBackPress: true
-  });
-}
 
 
 

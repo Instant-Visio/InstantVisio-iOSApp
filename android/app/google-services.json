@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1069540149829",
+    "firebase_url": "https://flash-antler-244109.firebaseio.com",
+    "project_id": "flash-antler-244109",
+    "storage_bucket": "flash-antler-244109.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069540149829:android:203b385ac1bd8eb245f12c",
+        "android_client_info": {
+          "package_name": "com.instantvisio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069540149829-dmnal5i765t4gqgn0vgc0dd4777p8501.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArvWkRIRw7jn8r5LlNwNqy1EWTIUJUAYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069540149829-dmnal5i765t4gqgn0vgc0dd4777p8501.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
