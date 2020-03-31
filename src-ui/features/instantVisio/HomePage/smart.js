@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Linking, Alert} from 'react-native';
+import {Linking, Alert,ToastAndroid,PermissionsAndroid} from 'react-native';
+import SendSMS from 'react-native-sms-x';
 import { createCall } from './../../../global/actions/createCall'
 import { InputCheckeremail, InputCheckersphoneNumber} from './../../../global/utils'
 // import Proptypes if needed
@@ -17,6 +18,28 @@ class Smart extends Component {
     }
   }
 
+  componentWillMount(){
+    this.requestPermission();
+  }
+
+  requestPermission = async () => {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.SEND_SMS,
+        {
+          title: 'Authorisation de partge',
+          message: 'acceptetez vous que l app envoi un sms a votre proche'
+        } 
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        //sms read permissions granted
+      } else {
+        //sms read permissions denied
+      }
+    } catch (err) {
+      //Err
+    }
+  };
 
   submit = () => {
 
@@ -41,6 +64,15 @@ class Smart extends Component {
       createCall(values)
           .then(roomName => {
               this.setState({videoCallId : roomName});
+                    //send sms only android
+                    if(InputCheckersphoneNumber(this.props.PhoneNumer))
+                    {
+                      SendSMS.send(123, this.props.PhoneNumer, "Hey.., this is the link of meeting "+ `https://instantvisio.daily.co/${this.state.videoCallId}`,
+                          (msg)=>{
+                            console.log(msg)
+                          }
+                    );}
+                    //end send sms to backgroung
 
               Alert.alert(
                 'Félicitations!',
