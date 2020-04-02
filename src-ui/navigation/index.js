@@ -1,10 +1,10 @@
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 
-import { HomeStack, SplashStack } from './Stacks/index';
+import { HomeStack, SplashStack, DrawerStack } from './Stacks/index';
 
 const RootNavigator = createSwitchNavigator(
   {
-    InstantVisio: HomeStack,
+    InstantVisio: DrawerStack,
     SplashScreen: SplashStack
   },
   {

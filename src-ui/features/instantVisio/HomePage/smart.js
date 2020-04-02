@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Linking, Alert,ToastAndroid,PermissionsAndroid} from 'react-native';
+import {Linking, Alert,PermissionsAndroid} from 'react-native';
 import SendSMS from 'react-native-sms-x';
 import { createCall } from './../../../global/actions/createCall'
 import { InputCheckeremail, InputCheckersphoneNumber} from './../../../global/utils'
@@ -11,10 +11,14 @@ class Smart extends Component {
   constructor(props) {
     super(props);
     this.submit = this.submit.bind(this);
+    this.btnSwitchEmail= this.btnSwitchEmail.bind(this);
+    this.btnSwitchSms= this.btnSwitchSms.bind(this);
+    
     this.state={
       loading:false, 
       videoCallId:'',
       error:'',
+      bySms:true
     }
   }
 
@@ -27,8 +31,8 @@ class Smart extends Component {
       const granted = await PermissionsAndroid.request(
         PermissionsAndroid.PERMISSIONS.SEND_SMS,
         {
-          title: 'Authorisation de partge',
-          message: 'acceptetez vous que l app envoi un sms a votre proche'
+          title: 'Authorisation utilisation SMS',
+          message: 'acceptetez vous que instant-visio envoi un sms a votre proche ?'
         } 
       );
       if (granted === PermissionsAndroid.RESULTS.GRANTED) {
@@ -45,10 +49,10 @@ class Smart extends Component {
 
     const values={
       personName: this.props.Name,
-      phone: this.props.PhoneNumer,
-      mail: this.props.Email,
+      phone: this.state.bySms?this.props.PhoneNumer:'',
+      mail: !this.state.bySms?this.props.Email:'',
     }
-    if(!InputCheckeremail(this.props.Email) && !InputCheckersphoneNumber(this.props.PhoneNumer))
+    if(!InputCheckeremail(values.mail) && !InputCheckersphoneNumber(values.phone))
     {
       this.setState({error : true})
       return;
@@ -65,9 +69,9 @@ class Smart extends Component {
           .then(roomName => {
               this.setState({videoCallId : roomName});
                     //send sms only android
-                    if(InputCheckersphoneNumber(this.props.PhoneNumer))
+                    if(InputCheckersphoneNumber(values.phone))
                     {
-                      SendSMS.send(123, this.props.PhoneNumer, `INSTANT VISIO : ${this.props.Name} vous invite à le joindre à un video conf merci de lien de la conf https://instantvisio.daily.co/${this.state.videoCallId}`,
+                      SendSMS.send(123, values.phone, `INSTANT VISIO : ${this.props.Name} vous invite à le joindre à une visio conf merci de trouver le lien de la conf https://instantvisio.daily.co/${this.state.videoCallId}`,
                           (msg)=>{
                             console.log(msg)
                           }
@@ -88,19 +92,35 @@ class Smart extends Component {
               this.setState({error : false})
           })
           .catch(err => {
-            this.setState({error : true})
+            Alert.alert(
+              'Error!',
+              'Une erreur est survenu reesayer plutard',
+              [
+                {
+                  text: 'Réessayer',
+                  onPress: () => console.log(err)
+                },
+              ]
+            );
         })
           .finally(() => {
             this.setState({loading : false})
+            this.state.bySms?this.props.onChangeePhoneNumber(''):this.props.onChangeEmail('');
         })
   }
+  
+  btnSwitchEmail = () => this.setState({ bySms: false });
+  btnSwitchSms = () => this.setState({ bySms: true });
 
   render() {
     return <Dumb 
     loading={this.state.loading}
     error={this.state.error}
     submit={this.submit} 
-    {...this.props} 
+    bySms={this.state.bySms}
+    btnSwitchEmail={this.btnSwitchEmail}
+    btnSwitchSms={this.btnSwitchSms} 
+    {...this.props}
     />;
   }
 }

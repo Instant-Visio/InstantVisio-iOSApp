@@ -2,5 +2,6 @@
 
 import HomeStack from './AppStack/HomeStack';
 import SplashStack from './AppStack/SplashStack';
+import DrawerStack from './AppStack/DrawerStack';
 
-export {HomeStack,SplashStack};
+export {HomeStack,SplashStack,DrawerStack};
