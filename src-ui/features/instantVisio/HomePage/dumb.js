@@ -1,7 +1,7 @@
 import React from 'react';
 import {ScrollView, Image, TouchableOpacity, View, Modal} from 'react-native';
 import {Spinner} from 'native-base';
-import {Block, Input, Text, Button, theme} from './../../../global/components/Socles';
+import {Block, Input, Text, Button, theme, Modals} from './../../../global/components/Socles';
 import {
   InputCheckeremail,
   InputCheckersphoneNumber,
@@ -25,6 +25,10 @@ const Dump = ({
   bySms,
   btnSwitchSms,
   btnSwitchEmail,
+  modalVisible,
+  redirectToDailyVisio,
+  modalTitle,
+  modalMessage
 }) => (
   <Block style={{flex: 1}}>
     <ScrollView showsVerticalScrollIndicator={false} style={{flex: 1}}>
@@ -94,7 +98,7 @@ const Dump = ({
           EMAIL
         </Button>
       </Block>
-      <Block style={{flex: 1, marginHorizontal: vars.widthUnit * 7}}>
+      <Block center style={{flex: 1, marginHorizontal: vars.widthUnit * 7}}>
         <Input
           color="#666666"
           style={{
@@ -161,11 +165,24 @@ const Dump = ({
         </TouchableOpacity>
       </Block>
     </ScrollView>
+
+
     <Modal transparent visible={loading}>
       <View style={[style.center, style.ApiModalLoader]}>
         <Spinner color={theme.COLORS.WARNING} size="large" />
       </View>
     </Modal>
+
+    <Modals
+      displayAlert={modalVisible}
+      displayAlertIcon={false}
+      alertTitleText={modalTitle}
+      alertMessageText={modalMessage}
+      displayPositiveButton={true}
+      positiveButtonText={'OK'}
+      onPressPositiveButton={redirectToDailyVisio}
+   />
+
   </Block>
 );
 
