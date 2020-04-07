@@ -16,6 +16,8 @@ class Smart extends Component {
     this.btnSwitchEmail = this.btnSwitchEmail.bind(this);
     this.btnSwitchSms = this.btnSwitchSms.bind(this);
     this.redirectToDailyVisio = this.redirectToDailyVisio.bind(this);
+    this.Ensavoirplus = this.Ensavoirplus.bind(this);
+    this.okButon = this.okButon.bind(this);
 
     this.state = {
       loading: false,
@@ -24,7 +26,8 @@ class Smart extends Component {
       bySms: true,
       modalVisible: false,
       modalMessage:'',
-      modalTitle: ''
+      modalTitle: '',
+      showEnsavoirplus:false
     };
   }
 
@@ -51,7 +54,7 @@ class Smart extends Component {
     createCall(values)
       .then(roomName => {
         this.setState({videoCallId: roomName});
-        this.setState({modalMessage: 'Une invitation a été envoyer à votre proche pour vous rejoindre call'});
+        this.setState({modalMessage: 'Une invitation a été envoyée à votre proche pour vous rejoindre en visiophonie'});
         this.setState({modalTitle: 'Félicitations'});
         this.setState({modalVisible: true});
         this.setState({error: false});
@@ -77,6 +80,10 @@ class Smart extends Component {
   btnSwitchEmail = () => this.setState({bySms: false});
   btnSwitchSms = () => this.setState({bySms: true});
 
+  Ensavoirplus = () => this.setState({showEnsavoirplus: true});
+  okButon = () => this.setState({showEnsavoirplus: false});
+  
+
   render() {
     return (
       <Dumb
@@ -90,6 +97,9 @@ class Smart extends Component {
         modalMessage={this.state.modalMessage}
         modalTitle={this.state.modalTitle}
         modalVisible={this.state.modalVisible}
+        Ensavoirplus={this.Ensavoirplus}
+        okButon={this.okButon}
+        showEnsavoirplus={this.state.showEnsavoirplus}
         {...this.props}
       />
     );
