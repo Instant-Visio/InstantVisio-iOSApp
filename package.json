@@ -20,7 +20,7 @@
     "mac:android-test": "export ENVFILE=.env.test && react-native run-android",
     "mac:android-preprod": "export ENVFILE=.env.preprod && react-native run-android",
     "mac:android-prod": "export ENVFILE=.env.prod && react-native run-android",
-    "mac:build-android-test": "export ENVFILE=.env.test && cd android && ./gradlew assembleRelease && cd ..",
+    "mac:build-android-test": "export ENVFILE=.env.test && cd android && ./gradlew assembleDebug && cd ..",
     "mac:build-android-preprod": "export ENVFILE=.env.preprod && cd android && ./gradlew assembleRelease && cd ..",
     "mac:build-android-prod": "export ENVFILE=.env.prod && cd android && ./gradlew assembleRelease && cd ..",
     "build-android-test": "SET ENVFILE=.env.test && cd android && gradlew assembleRelease && cd ..",
