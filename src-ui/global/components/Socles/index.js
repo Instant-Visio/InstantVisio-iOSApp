@@ -17,6 +17,7 @@ import Select from './Select';
 import Text from './Text';
 import Toast from './Toast';
 import Modals from './Modals';
+import ModalUtils from './ModalUtils';
 
 
 import theme, { withSocle, SocleProvider } from './theme';
@@ -41,4 +42,5 @@ export {
   withSocle,
   SocleProvider,
   Modals,
+  ModalUtils
 };

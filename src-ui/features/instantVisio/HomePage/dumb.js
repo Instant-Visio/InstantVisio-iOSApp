@@ -1,7 +1,15 @@
 import React from 'react';
 import {ScrollView, Image, TouchableOpacity, View, Modal} from 'react-native';
 import {Spinner} from 'native-base';
-import {Block, Input, Text, Button, theme, Modals} from './../../../global/components/Socles';
+import {
+  Block,
+  Input,
+  Text,
+  Button,
+  theme,
+  Modals,
+  ModalUtils,
+} from './../../../global/components/Socles';
 import {
   InputCheckeremail,
   InputCheckersphoneNumber,
@@ -28,7 +36,10 @@ const Dump = ({
   modalVisible,
   redirectToDailyVisio,
   modalTitle,
-  modalMessage
+  modalMessage,
+  showEnsavoirplus,
+  okButon,
+  Ensavoirplus,
 }) => (
   <Block style={{flex: 1}}>
     <ScrollView showsVerticalScrollIndicator={false} style={{flex: 1}}>
@@ -124,7 +135,7 @@ const Dump = ({
             }}
             placeholderTextColor="#9FA5AA"
             placeholder="Numéro de téléphone de votre proche"
-            help="Numéro de téléphone ex: +212XXXXXXXXXX"
+            help="Numéro de téléphone ex: XXXXXXXXXX"
             bottomHelp
             value={PhoneNumer}
             underlineColorAndroid="transparent"
@@ -160,18 +171,31 @@ const Dump = ({
         </Button>
       </Block>
       <Block center flex={0.5} style={{marginVertical: vars.heightUnit}}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={Ensavoirplus}>
           <Text style={[{color: '#666666', fontSize: 16}]}>En savoir plus</Text>
         </TouchableOpacity>
       </Block>
     </ScrollView>
-
 
     <Modal transparent visible={loading}>
       <View style={[style.center, style.ApiModalLoader]}>
         <Spinner color={theme.COLORS.WARNING} size="large" />
       </View>
     </Modal>
+    <ModalUtils
+      displayAlert={showEnsavoirplus}
+      alertTitleText="En savoir plus"
+      alertMessageText="Le responsable de traitement, Stéphane Luçon, s`assure du traitement des données recueillies pour effectuer l`envoi du SMS ou de l`e-mail au correspondant. Suite à l`envoi, ces données sont effacées au bout d`un jour. Pour en savoir plus sur la gestion des données personnelles et pour exercer vos droits, veuillez vous reporter à la page"
+      displayPositiveButton={true}
+      positiveButtonText="Données personnelles"
+      onPressPositiveButton={() => {
+        okButon();
+        navigation.navigate('DonneesPersonnelles');
+      }}
+      displayNegativeButton={true}
+      negativeButtonText={'OK'}
+      onPressNegativeButton={() => okButon()}
+    />
 
     <Modals
       displayAlert={modalVisible}
@@ -181,8 +205,7 @@ const Dump = ({
       displayPositiveButton={true}
       positiveButtonText={'OK'}
       onPressPositiveButton={redirectToDailyVisio}
-   />
-
+    />
   </Block>
 );
 
