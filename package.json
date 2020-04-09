@@ -25,7 +25,8 @@
     "mac:build-android-prod": "export ENVFILE=.env.prod && cd android && ./gradlew assembleRelease && cd ..",
     "build-android-test": "SET ENVFILE=.env.test && cd android && gradlew assembleRelease && cd ..",
     "build-android-preprod": "SET ENVFILE=.env.preprod && cd android && gradlew assembleRelease && cd ..",
-    "build-android-prod": "SET ENVFILE=.env.prod && cd android && gradlew assembleRelease && cd .."
+    "build-android-prod": "SET ENVFILE=.env.prod && cd android && gradlew assembleRelease && cd ..",
+    "build-android-prod-aab": "SET ENVFILE=.env.prod && cd android && gradlew bundleRelease && cd .."
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.6",

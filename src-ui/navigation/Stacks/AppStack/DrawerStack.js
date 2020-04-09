@@ -62,7 +62,7 @@ const AppStack = createDrawerNavigator(
       screen: MentionLegalStack,
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} title="Mention Legal" />
+          <DrawerItem focused={focused} title="Mentions légales" />
         )
       })
     },
@@ -78,7 +78,7 @@ const AppStack = createDrawerNavigator(
       screen: AboutUSStack,
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} title="A propos de nous" />
+          <DrawerItem focused={focused} title="À propos de nous" />
         )
       })
     }
