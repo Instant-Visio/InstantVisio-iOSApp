@@ -37,9 +37,6 @@ const Dump = ({navigation}) => (
           style={{width: 150, height: 150}}
           source={images.logo.visioLogo}
         />
-        <Text style={{fontSize: 16, color: '#696969'}}>
-          Daily.co, un partenaire de la première heure
-        </Text>
         <Text style={{fontSize: 26, fontWeight: 'bold', color: '#696969'}}>Blog</Text>
         {AboutUS.map(about => (
           <Block key={about.id}>
