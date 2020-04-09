@@ -8,6 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
+    "link": "react-native link",
     "android-dev": "SET ENVFILE=.env.dev && react-native run-android",
     "android-test": "SET ENVFILE=.env.test && react-native run-android",
     "android-preprod": "SET ENVFILE=.env.preprod && react-native run-android",
