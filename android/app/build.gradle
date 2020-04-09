@@ -154,8 +154,8 @@ android {
             keyPassword 'android'
         }
         release {
-            if (System.getenv('BITRISEIO_ANDROID_KEYSTORE_URL')) {
-                storeFile file(System.getenv('BITRISEIO_ANDROID_KEYSTORE_URL'))
+            if (System.getenv('ANDROID_PROD_SIGNING_FILE_NAME')) {
+                storeFile file(System.getenv('ANDROID_PROD_SIGNING_FILE_NAME'))
                 storePassword System.getenv('BITRISEIO_ANDROID_KEYSTORE_PASSWORD')
                 keyAlias System.getenv('BITRISEIO_ANDROID_KEYSTORE_ALIAS')
                 keyPassword System.getenv('BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD')
