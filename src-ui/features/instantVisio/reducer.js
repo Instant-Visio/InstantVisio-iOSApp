@@ -9,6 +9,9 @@ const INITIAL_STATE = fromJS({
     Email: '',
     PhoneNumer: '',
     Name : ''
+  },
+  visio: {
+    videoCallId:''
   }
 });
 

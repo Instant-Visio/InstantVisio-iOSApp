@@ -8,7 +8,7 @@ import {MentionLegal} from './../../../../global/static/data';
 const Dump = ({navigation}) => (
   <>
     <NavBar
-      title="MENTION LEGALE"
+      title="MENTIONS LÉGALES"
       left={
         <Button
         onlyIcon

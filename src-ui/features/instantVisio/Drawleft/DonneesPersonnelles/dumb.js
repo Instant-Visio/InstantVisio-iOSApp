@@ -13,7 +13,7 @@ import {DonneePersonnelle} from './../../../../global/static/data';
 const Dump = ({navigation}) => (
   <>
     <NavBar
-      title="DONNEES PERSONNELLES"
+      title="DONNÉES PERSONNELLES"
       left={
         <Button
         onlyIcon

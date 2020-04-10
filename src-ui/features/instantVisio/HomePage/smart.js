@@ -53,6 +53,11 @@ class Smart extends Component {
     this.setState({loading: true});
     createCall(values)
       .then(roomName => {
+
+        //set la valeur du videoCallId dans le store
+        this.props.SetVideoCallId(roomName);
+        //fin set la valeur du videoCallId dans le store
+        
         this.setState({videoCallId: roomName});
         this.setState({modalMessage: 'Une invitation a été envoyée à votre proche pour vous rejoindre en visiophonie'});
         this.setState({modalTitle: 'Félicitations'});
