@@ -154,7 +154,12 @@ android {
             keyPassword 'android'
         }
         release {
-            if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+            if (System.getenv('ANDROID_PROD_SIGNING_FILE_NAME')) {
+                storeFile file(System.getenv('ANDROID_PROD_SIGNING_FILE_NAME'))
+                storePassword System.getenv('BITRISEIO_ANDROID_KEYSTORE_PASSWORD')
+                keyAlias System.getenv('BITRISEIO_ANDROID_KEYSTORE_ALIAS')
+                keyPassword System.getenv('BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD')
+            } else if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
                 storeFile file(MYAPP_RELEASE_STORE_FILE)
                 storePassword MYAPP_RELEASE_STORE_PASSWORD
                 keyAlias MYAPP_RELEASE_KEY_ALIAS
