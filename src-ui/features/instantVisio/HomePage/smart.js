@@ -6,6 +6,8 @@ import {
   InputCheckersphoneNumber,
 } from './../../../global/utils';
 // import Proptypes if needed
+import {request} from 'react-native-permissions';
+import {check, PERMISSIONS, RESULTS} from 'react-native-permissions';
 
 import Dumb from './dumb';
 
@@ -51,6 +53,7 @@ class Smart extends Component {
     }
     //send mail/sms
     this.setState({loading: true});
+    // Promise.resolve('https://www.google.it')
     createCall(values)
       .then(roomName => {
 
@@ -77,9 +80,47 @@ class Smart extends Component {
       });
   };
 
-  redirectToDailyVisio(){
-    Linking.openURL(`https://instantvisio.daily.co/${this.state.videoCallId}`)
-    this.setState({modalVisible: false});
+  checkAndAskPermissions = async () => {
+    return Promise.all([
+      this.checkPermission(PERMISSIONS.ANDROID.CAMERA),
+      this.checkPermission(PERMISSIONS.ANDROID.RECORD_AUDIO)
+    ])
+  }
+
+  checkPermission = async (permission) => {
+    let errMessage = '';
+    return check(permission)
+      .then(result => {
+        switch (result) {
+          case RESULTS.UNAVAILABLE:
+            errMessage = 'This feature is not available (on this device / in this context)';
+            console.log(errMessage);
+            throw errMessage;
+          case RESULTS.DENIED:
+            console.log(
+              `The permission ${permission} has not been requested / is denied but requestable`,
+            );
+            return request(permission);
+          case RESULTS.GRANTED:
+            console.log('The permission is granted');
+            return true;
+          case RESULTS.BLOCKED:
+            errMessage = 'The permission is denied and not requestable anymore';
+            console.log(errMessage);
+            throw errMessage;
+        }
+      })
+  }
+
+  async redirectToDailyVisio(){
+    console.log('Opening visio')
+    try {
+      await this.checkAndAskPermissions();
+      this.props.navigation.navigate('Visio')
+      this.setState({modalVisible: false});
+    } catch(err) {
+      console.log('Permissions error: ' + err);
+    }
   }
 
   btnSwitchEmail = () => this.setState({bySms: false});

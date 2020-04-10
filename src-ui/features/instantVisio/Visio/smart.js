@@ -8,6 +8,7 @@ class Smart extends Component {
   {
     super(props);
     //tu peux l'utiliser au niveau du smart
+    console.log(`starting video: ${this.props.videoCallIdProps}`)
     this.props.videoCallIdProps
   }
 
