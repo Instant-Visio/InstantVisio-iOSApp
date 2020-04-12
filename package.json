@@ -24,6 +24,7 @@
     "mac:build-android-test": "export ENVFILE=.env.test && cd android && ./gradlew assembleDebug && cd ..",
     "mac:build-android-preprod": "export ENVFILE=.env.preprod && cd android && ./gradlew assembleRelease && cd ..",
     "mac:build-android-prod": "export ENVFILE=.env.prod && cd android && ./gradlew assembleRelease && cd ..",
+    "mac:build-android-prod-aab": "export ENVFILE=.env.prod && cd android && ./gradlew bundleRelease && cd ..",
     "build-android-test": "SET ENVFILE=.env.test && cd android && gradlew assembleRelease && cd ..",
     "build-android-preprod": "SET ENVFILE=.env.preprod && cd android && gradlew assembleRelease && cd ..",
     "build-android-prod": "SET ENVFILE=.env.prod && cd android && gradlew assembleRelease && cd ..",
