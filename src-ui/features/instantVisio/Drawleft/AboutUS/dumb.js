@@ -37,7 +37,7 @@ const Dump = ({navigation}) => (
           style={{width: 150, height: 150}}
           source={images.logo.visioLogo}
         />
-        <Text style={{fontSize: 26, fontWeight: 'bold', color: '#696969'}}>Blog</Text>
+        <Text style={{fontSize: 26, fontWeight: 'bold', color: '#696969'}}>Credits</Text>
         {AboutUS.map(about => (
           <Block key={about.id}>
             <Text

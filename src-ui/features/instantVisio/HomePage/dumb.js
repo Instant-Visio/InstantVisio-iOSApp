@@ -42,20 +42,20 @@ const Dump = ({
   Ensavoirplus,
 }) => (
   <Block style={{flex: 1}}>
+    <Block flex={0.1} style={{marginHorizontal: 15, marginTop: 15}}>
+      <Button
+        onlyIcon
+        icon="menu"
+        iconFamily="entypo"
+        iconSize={30}
+        color="transparent"
+        iconColor="#666666"
+        onPress={() => navigation.openDrawer()}
+        style={{width: 40, height: 40}}>
+        no text
+      </Button>
+    </Block>
     <ScrollView showsVerticalScrollIndicator={false} style={{flex: 1}}>
-      <Block flex={0.1} style={{marginHorizontal: 15, marginTop: 15}}>
-        <Button
-          onlyIcon
-          icon="menu"
-          iconFamily="entypo"
-          iconSize={30}
-          color="transparent"
-          iconColor="#666666"
-          onPress={() => navigation.openDrawer()}
-          style={{width: 40, height: 40}}>
-          no text
-        </Button>
-      </Block>
       <Block center flex={2} style={{marginBottom: vars.heightUnit * 3.5}}>
         <Image
           style={{width: 170, height: 160}}
