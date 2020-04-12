@@ -6,12 +6,15 @@ import {createStackNavigator} from 'react-navigation-stack';
 import transitionConfig from './../../../global/utils/NavAnimTransition';
 
 // screens
-import {HomePage} from './../../../global/components/screens';
+import {HomePage,VisioPage} from './../../../global/components/screens';
 
 const HomeStack = createStackNavigator(
   {
     Home: {
       screen: HomePage,
+    },
+    Visio:{
+      screen:VisioPage
     }
   },
   {

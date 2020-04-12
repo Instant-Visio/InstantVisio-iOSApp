@@ -10,7 +10,6 @@ import transitionConfig from './../../../global/utils/NavAnimTransition';
 // screens
 import {MentionLegal,DonneesPersonnelles,AboutUS} from './../../../global/components/screens';
 import {HomeStack} from './../../Stacks';
-import VisioStack from "./VisioStack";
 
 const MentionLegalStack = createStackNavigator({
     MentionLegal: {
@@ -56,14 +55,6 @@ const AppStack = createDrawerNavigator(
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
           <DrawerItem focused={focused} title="Accueil" />
-        )
-      })
-    },
-    Visio: {
-      screen: VisioStack,
-      navigationOptions: navOpt => ({
-        drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} title="Visio" />
         )
       })
     },

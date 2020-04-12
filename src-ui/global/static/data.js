@@ -311,7 +311,7 @@ export const AboutUS = [
             {
                 id:6,
                 image:'',
-                nom:"Mattie",
+                nom:"Mattia Primavera",
                 link:''
             }
         ]

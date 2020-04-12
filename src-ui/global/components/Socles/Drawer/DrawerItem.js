@@ -16,7 +16,7 @@ class DrawerItem extends React.Component {
             color={focused ? "white" : theme.COLORS.WARNING}
           />
         );
-      case "Mention Legal":
+      case "Mentions légales":
         return (
           <Icon
             name="legal"
@@ -34,7 +34,7 @@ class DrawerItem extends React.Component {
             color={focused ? "white" : theme.COLORS.WARNING}
           />
         );
-      case "A propos de nous":
+      case "À propos de nous":
         return (
           <Icon
             name="info-with-circle"
