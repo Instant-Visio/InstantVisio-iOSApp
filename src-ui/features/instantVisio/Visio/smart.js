@@ -1,20 +1,37 @@
-import React, { Component } from 'react';
-
+import React, {Component} from 'react';
+import Orientation from 'react-native-orientation';
+import { BackHandler } from 'react-native';
 import Dumb from './dumb';
 
 class Smart extends Component {
-  
-  constructor(props)
-  {
+  constructor(props) {
     super(props);
-    //tu peux l'utiliser au niveau du smart
-    console.log(`starting video: ${this.props.videoCallIdProps}`)
-    this.props.videoCallIdProps
+    this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
   }
 
+  componentWillMount() {
+    Orientation.lockToLandscape();
+    BackHandler.addEventListener(
+      'hardwareBackPress',
+      this.handleBackButtonClick,
+    );
+  }
+
+  componentWillUnmount() {
+    BackHandler.removeEventListener(
+      'hardwareBackPress',
+      this.handleBackButtonClick,
+    );
+  }
+
+  handleBackButtonClick() {
+    Orientation.lockToPortrait();
+    this.props.navigation.goBack(null);
+    return true;
+  }
 
   render() {
-    return <Dumb {...this.props}/>;
+    return <Dumb {...this.props} />;
   }
 }
 
