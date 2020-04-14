@@ -28,7 +28,8 @@
     "build-android-test": "SET ENVFILE=.env.test && cd android && gradlew assembleRelease && cd ..",
     "build-android-preprod": "SET ENVFILE=.env.preprod && cd android && gradlew assembleRelease && cd ..",
     "build-android-prod": "SET ENVFILE=.env.prod && cd android && gradlew assembleRelease && cd ..",
-    "build-android-prod-aab": "SET ENVFILE=.env.prod && cd android && gradlew bundleRelease && cd .."
+    "build-android-prod-aab": "SET ENVFILE=.env.prod && cd android && gradlew bundleRelease && cd ..",
+    "postversion": "react-native-version"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.6",
@@ -74,6 +75,7 @@
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
+    "react-native-version": "^4.0.0",
     "react-test-renderer": "16.9.0"
   },
   "jest": {
