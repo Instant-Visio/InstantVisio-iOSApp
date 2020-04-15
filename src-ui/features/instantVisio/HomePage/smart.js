@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Alert, Platform} from 'react-native';
-import Orientation from 'react-native-orientation';
 import {createCall} from './../../../global/actions/createCall';
 import {
   InputCheckeremail,
@@ -32,11 +31,6 @@ class Smart extends Component {
       modalTitle: '',
       showEnsavoirplus:false
     };
-  }
-
-  componentWillMount()
-  {
-    Orientation.lockToPortrait();
   }
 
   submit = () => {
@@ -88,8 +82,8 @@ class Smart extends Component {
 
   checkAndAskPermissions = async () => {
     return Promise.all([
-      Platform.OS === 'ios' ==='android' ? this.checkPermission(PERMISSIONS.ANDROID.CAMERA) : this.checkPermission(PERMISSIONS.IOS.CAMERA),
-      Platform.OS === 'ios' === 'android' ? this.checkPermission(PERMISSIONS.ANDROID.RECORD_AUDIO) : this.checkPermission(PERMISSIONS.IOS.MICROPHONE)
+      Platform.OS ==='android' ? this.checkPermission(PERMISSIONS.ANDROID.CAMERA) : this.checkPermission(PERMISSIONS.IOS.CAMERA),
+      Platform.OS === 'android' ? this.checkPermission(PERMISSIONS.ANDROID.RECORD_AUDIO) : this.checkPermission(PERMISSIONS.IOS.MICROPHONE)
     ]);
   }
 
