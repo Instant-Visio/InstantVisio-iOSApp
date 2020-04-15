@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Alert} from 'react-native';
+import {Alert, Platform} from 'react-native';
 import Orientation from 'react-native-orientation';
 import {createCall} from './../../../global/actions/createCall';
 import {
@@ -88,9 +88,9 @@ class Smart extends Component {
 
   checkAndAskPermissions = async () => {
     return Promise.all([
-      this.checkPermission(PERMISSIONS.ANDROID.CAMERA),
-      this.checkPermission(PERMISSIONS.ANDROID.RECORD_AUDIO)
-    ])
+      Platform.OS === 'ios' ==='android' ? this.checkPermission(PERMISSIONS.ANDROID.CAMERA) : this.checkPermission(PERMISSIONS.IOS.CAMERA),
+      Platform.OS === 'ios' === 'android' ? this.checkPermission(PERMISSIONS.ANDROID.RECORD_AUDIO) : this.checkPermission(PERMISSIONS.IOS.MICROPHONE)
+    ]);
   }
 
   checkPermission = async (permission) => {
