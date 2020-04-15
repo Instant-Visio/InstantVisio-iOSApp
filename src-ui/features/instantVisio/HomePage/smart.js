@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Alert} from 'react-native';
-import Orientation from 'react-native-orientation';
+import {Linking, Alert, PermissionsAndroid} from 'react-native';
 import {createCall} from './../../../global/actions/createCall';
 import {
   InputCheckeremail,
@@ -32,11 +31,6 @@ class Smart extends Component {
       modalTitle: '',
       showEnsavoirplus:false
     };
-  }
-
-  componentWillMount()
-  {
-    Orientation.lockToPortrait();
   }
 
   submit = () => {
