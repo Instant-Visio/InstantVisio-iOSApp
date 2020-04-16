@@ -5,6 +5,7 @@ import {
   InputCheckeremail,
   InputCheckersphoneNumber,
 } from './../../../global/utils';
+import {i18nString} from './../../../global/i18n';
 // import Proptypes if needed
 import {request} from 'react-native-permissions';
 import {check, PERMISSIONS, RESULTS} from 'react-native-permissions';
@@ -62,15 +63,15 @@ class Smart extends Component {
         //fin set la valeur du videoCallId dans le store
         
         this.setState({videoCallId: roomName});
-        this.setState({modalMessage: 'Une invitation a été envoyée à votre proche pour vous rejoindre en visiophonie'});
-        this.setState({modalTitle: 'Félicitations'});
+        this.setState({modalMessage: i18nString("textFelicitaion")});
+        this.setState({modalTitle: i18nString("titleFelicitaion")});
         this.setState({modalVisible: true});
         this.setState({error: false});
       })
       .catch(err => {
-        Alert.alert('Error!', 'Une erreur est survenu reesayer plutard', [
+        Alert.alert(i18nString("errorTitle"), i18nString("errorCall"), [
           {
-            text: 'Réessayer',
+            text: i18nString("btnTry"),
             onPress: () => console.log(err)
           }
         ]);

@@ -7,13 +7,13 @@ import {
   Button
 } from './../../../../global/components/Socles';
 import images from './../../../../global/components/images';
+import {i18nString} from './../../../../global/i18n';
 import style from './style';
-import {DonneePersonnelle} from './../../../../global/static/data';
 
-const Dump = ({navigation}) => (
+const Dump = ({navigation, DonneePersonnelle}) => (
   <>
     <NavBar
-      title="DONNÉES PERSONNELLES"
+      title={i18nString('labelDonneesPersonnelle').toUpperCase()}
       left={
         <Button
         onlyIcon
@@ -36,17 +36,19 @@ const Dump = ({navigation}) => (
           source={images.logo.visioLogo}
         />
         <Text style={{fontSize: 26, fontWeight: 'bold', color: '#696969'}}>
-          Données personnelles
+          {i18nString('labelDonneesPersonnelle')}
         </Text>
         {DonneePersonnelle.map(donnee => (
           <Block row key={donnee.id} style={{marginVertical: 5}}>
             {donnee.titreGras !== '' && (
               <Text style={{fontWeight: 'bold', color: '#696969'}}>
-                {donnee.titreGras}{' '}
+                {i18nString('DonneePersonnelle.'+(donnee.id-1)+'.titreGras')}
               </Text>
             )}
             <Block flex>
-              <Text>{donnee.Text}</Text>
+              <Text>
+              {i18nString('DonneePersonnelle.'+(donnee.id-1)+'.Text')}
+              </Text>
             </Block>
           </Block>
         ))}

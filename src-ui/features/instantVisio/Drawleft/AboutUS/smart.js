@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Orientation from 'react-native-orientation';
+import fr from './../../../../../assets/i18n/fr.json';
+
 import Dumb from './dumb';
 
 class Smart extends Component {
@@ -9,13 +10,9 @@ class Smart extends Component {
     super(props);
   }
 
-  componentWillMount()
-  {
-    Orientation.lockToPortrait();
-  }
 
   render() {
-    return <Dumb {...this.props}/>;
+    return <Dumb AboutUS={fr.AboutUS} {...this.props}/>;
   }
 }
 

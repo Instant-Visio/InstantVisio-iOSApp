@@ -16,6 +16,8 @@ import {
 } from './../../../global/utils';
 import images from './../../../global/components/images';
 import vars from './../../../global/vars';
+import {i18nString} from './../../../global/i18n';
+
 
 import style from './style';
 
@@ -71,10 +73,7 @@ const Dump = ({
         }}
         flex={0.5}>
         <Text center style={{color: '#9FA5AA', fontSize: 15}}>
-          À la soumission du formulaire, vous serez redirigé-e vers la page
-          d'appel en visiophone. En parallèle, un sms et / ou un e-mail sera
-          envoyé à votre proche et l'invitera à vous rejoindre directement sur
-          la page pour échanger avec vous.
+          {i18nString('textHome')}
         </Text>
       </Block>
       <Block
@@ -95,7 +94,7 @@ const Dump = ({
             borderColor: bySms ? '#66cccc' : null,
             borderWidth: bySms ? 1.5 : 0,
           }}>
-          SMS
+          {i18nString('btnSMS')}
         </Button>
         <Button
           opacity={0.5}
@@ -106,7 +105,7 @@ const Dump = ({
             borderColor: bySms ? null : '#66cccc',
             borderWidth: bySms ? 0 : 1.5,
           }}>
-          EMAIL
+          {i18nString('btnEMAIL')}
         </Button>
       </Block>
       <Block center style={{flex: 1, marginHorizontal: vars.widthUnit * 7}}>
@@ -117,7 +116,7 @@ const Dump = ({
               error && /^[\s]*$/.test(Name.toString()) ? 'red' : '#666666',
           }}
           placeholderTextColor="#9FA5AA"
-          placeholder="Votre nom"
+          placeholder={i18nString('placeholderYourName')}
           value={Name}
           autoCapitalize="none"
           underlineColorAndroid="transparent"
@@ -134,8 +133,8 @@ const Dump = ({
                   : '#666666',
             }}
             placeholderTextColor="#9FA5AA"
-            placeholder="Numéro de téléphone de votre proche"
-            help="Numéro de téléphone ex: XXXXXXXXXX"
+            placeholder={i18nString('placeholderPhone')}
+            help={i18nString('phoneInputHelp')}
             bottomHelp
             value={PhoneNumer}
             underlineColorAndroid="transparent"
@@ -151,8 +150,8 @@ const Dump = ({
                 error && !InputCheckeremail(Email) ? 'red' : '#666666',
             }}
             placeholderTextColor="#9FA5AA"
-            placeholder="E-mail de votre proche"
-            help="E-mail de votre proche obligatoire"
+            placeholder={i18nString('placeholderEmail')}
+            help={i18nString('emailInputHelp')}
             bottomHelp
             autoCapitalize="none"
             value={Email}
@@ -167,12 +166,12 @@ const Dump = ({
           color="#666666"
           onPress={submit}
           style={{width: 307, marginVertical: vars.heightUnit * 1.5}}>
-          Joindre mon proche
+          {i18nString('btnJoindreVotreProche')}
         </Button>
       </Block>
       <Block center flex={0.5} style={{marginVertical: vars.heightUnit}}>
         <TouchableOpacity onPress={Ensavoirplus}>
-          <Text style={[{color: '#666666', fontSize: 16}]}>En savoir plus</Text>
+          <Text style={[{color: '#666666', fontSize: 16}]}>{i18nString('linkEnsavoirPlus')}</Text>
         </TouchableOpacity>
       </Block>
     </ScrollView>
@@ -184,10 +183,10 @@ const Dump = ({
     </Modal>
     <ModalUtils
       displayAlert={showEnsavoirplus}
-      alertTitleText="En savoir plus"
-      alertMessageText="Le responsable de traitement, Stéphane Luçon, s`assure du traitement des données recueillies pour effectuer l`envoi du SMS ou de l`e-mail au correspondant. Suite à l`envoi, ces données sont effacées au bout d`un jour. Pour en savoir plus sur la gestion des données personnelles et pour exercer vos droits, veuillez vous reporter à la page"
+      alertTitleText={i18nString('linkEnsavoirPlus')}
+      alertMessageText={i18nString('textEnsavoirPlus')}
       displayPositiveButton={true}
-      positiveButtonText="Données personnelles"
+      positiveButtonText={i18nString('labelDonneesPersonnelle')}
       onPressPositiveButton={() => {
         okButon();
         navigation.navigate('DonneesPersonnelles');

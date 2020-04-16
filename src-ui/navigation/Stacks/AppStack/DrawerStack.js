@@ -6,6 +6,7 @@ import DrawerItem from './../../../global/components/Socles/Drawer/DrawerItem';
 import Menu from './../../../global/components/Socles/Drawer/Menu';
 // transition for screens
 import transitionConfig from './../../../global/utils/NavAnimTransition';
+import {i18nString} from './../../../global/i18n';
 
 // screens
 import {MentionLegal,DonneesPersonnelles,AboutUS} from './../../../global/components/screens';
@@ -54,7 +55,7 @@ const AppStack = createDrawerNavigator(
       screen: HomeStack,
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} title="Accueil" />
+          <DrawerItem focused={focused} title={i18nString("MenuHome")} />
         )
       })
     },
@@ -62,7 +63,7 @@ const AppStack = createDrawerNavigator(
       screen: MentionLegalStack,
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} title="Mentions légales" />
+          <DrawerItem focused={focused} title={i18nString("MenuML")} />
         )
       })
     },
@@ -70,7 +71,7 @@ const AppStack = createDrawerNavigator(
       screen: DonneesPersonnellesStack,
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} title="Données Personnelles" />
+          <DrawerItem focused={focused} title={i18nString("MenuDP")} />
         )
       })
     },
@@ -78,7 +79,7 @@ const AppStack = createDrawerNavigator(
       screen: AboutUSStack,
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} title="À propos de nous" />
+          <DrawerItem focused={focused} title={i18nString("MenuUS")} />
         )
       })
     }

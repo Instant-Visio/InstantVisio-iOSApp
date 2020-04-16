@@ -2,17 +2,30 @@ import ReactNative from 'react-native';
 import I18n from 'react-native-i18n';
 import fr from '../../../assets/i18n/fr.json';
 import en from '../../../assets/i18n/en.json';
-
+import ar from '../../../assets/i18n/ar.json';
+import it from '../../../assets/i18n/it.json';
+import es from '../../../assets/i18n/es.json';
+import de from '../../../assets/i18n/de.json';
+import hu from '../../../assets/i18n/hu.json';
+import ro from '../../../assets/i18n/ro.json';
+import gr from '../../../assets/i18n/gr.json';
 
 
 I18n.fallbacks = true;
 
 I18n.translations = {
   fr,
-  en
+  en,
+  ar,
+  it,
+  es,
+  de,
+  hu,
+  ro,
+  gr
 };
-I18n.defaultLocale = 'fr';
-I18n.locale = 'fr';
+// I18n.defaultLocale = 'fr';
+// I18n.locale = 'fr';
 
 const currentLocale = I18n.currentLocale();
 

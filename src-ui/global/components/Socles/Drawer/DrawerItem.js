@@ -1,13 +1,14 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import { Block, Text, theme , Icon} from "./../../Socles";
+import {i18nString} from './../../../../global/i18n';
 
 class DrawerItem extends React.Component {
   renderIcon = () => {
     const { title, focused } = this.props;
 
     switch (title) {
-      case "Accueil":
+      case i18nString("MenuHome"):
         return (
           <Icon
             name="home"
@@ -16,7 +17,7 @@ class DrawerItem extends React.Component {
             color={focused ? "white" : theme.COLORS.WARNING}
           />
         );
-      case "Mentions légales":
+      case i18nString("MenuML"):
         return (
           <Icon
             name="legal"
@@ -25,7 +26,7 @@ class DrawerItem extends React.Component {
             color={focused ? "white" : theme.COLORS.WARNING}
           />
         );
-      case "Données Personnelles":
+      case i18nString("MenuDP"):
         return (
           <Icon
             name="database"
@@ -34,7 +35,7 @@ class DrawerItem extends React.Component {
             color={focused ? "white" : theme.COLORS.WARNING}
           />
         );
-      case "À propos de nous":
+      case i18nString("MenuUS"):
         return (
           <Icon
             name="info-with-circle"
