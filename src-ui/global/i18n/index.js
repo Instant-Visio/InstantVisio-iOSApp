@@ -24,7 +24,7 @@ I18n.translations = {
   ro,
   gr
 };
-// I18n.defaultLocale = 'fr';
+I18n.defaultLocale = 'fr';
 // I18n.locale = 'fr';
 
 const currentLocale = I18n.currentLocale();

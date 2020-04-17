@@ -1,6 +1,7 @@
 import React from 'react';
 import {ScrollView, Image, TouchableOpacity, View, Modal} from 'react-native';
 import {Spinner} from 'native-base';
+import data from './../../../global/static/data.json'
 import {
   Block,
   Input,
@@ -17,7 +18,7 @@ import {
 import images from './../../../global/components/images';
 import vars from './../../../global/vars';
 import {i18nString} from './../../../global/i18n';
-
+import SelectionContry from './selectCountries';
 
 import style from './style';
 
@@ -42,6 +43,8 @@ const Dump = ({
   showEnsavoirplus,
   okButon,
   Ensavoirplus,
+  SetModalVisibleCountries,
+  CountrySelected
 }) => (
   <Block style={{flex: 1}}>
     <Block flex={0.1} style={{marginHorizontal: 15, marginTop: 15}}>
@@ -141,6 +144,17 @@ const Dump = ({
             keyboardType={'phone-pad'}
             autoCapitalize="none"
             onChangeText={onChangeePhoneNumber}
+
+            left2
+            flag={CountrySelected.flag}
+            onPressFlag={SetModalVisibleCountries}
+
+            left3
+            icon3="md-arrow-dropdown"
+            family3="ionicon"
+            iconSize3={14}
+            iconColor3="#666666"
+            onPressIcon3={SetModalVisibleCountries}
           />
         ) : (
           <Input
@@ -205,6 +219,8 @@ const Dump = ({
       positiveButtonText={'OK'}
       onPressPositiveButton={redirectToDailyVisio}
     />
+
+    <SelectionContry/>
   </Block>
 );
 

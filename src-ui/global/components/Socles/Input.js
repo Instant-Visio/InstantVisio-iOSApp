@@ -20,6 +20,18 @@ function Input({
   left,
   right,
   iconColor,
+
+  flag,
+  left2,
+  right2,
+
+  icon3,
+  family3,
+  left3,
+  right3,
+  iconColor3,
+  onPressIcon3,
+
   topHelp,
   bottomHelp,
   theme,
@@ -27,6 +39,8 @@ function Input({
   iconSize,
   iconContent,
   password,
+  onPressIcon,
+  onPressFlag,
   ...rest
 }) {
   const [isPassword, setIsPassword] = React.useState(false);
@@ -58,11 +72,36 @@ function Input({
       size={iconSize || theme.SIZES.BASE * 1.0625}
       style={{ marginRight: left && !right ? theme.SIZES.BASE * 0.2 : 0 }}
       color={iconColor || placeholderTextColor || theme.COLORS.PLACEHOLDER}
+      onPress={onPressIcon && onPressIcon}
     />
   ) : (
       iconContent
     );
 
+
+    const flagInstance = flag ? (
+      <TouchableOpacity
+      onPress={() =>onPressFlag()}>
+      <Text style={{ marginRight: left2 && !right2 ? theme.SIZES.BASE * 0.2 : 0 }}>{flag}</Text>
+    </TouchableOpacity>
+    ) : (
+        iconContent
+  );
+
+  const iconInstance3 = icon3 ? (
+    <Icon
+      name={icon3}
+      family={family3}
+      size={iconSize || theme.SIZES.BASE * 1.0625}
+      style={{ marginRight: left3 && !right3 ? theme.SIZES.BASE * 0.2 : 0 }}
+      color={iconColor3 || placeholderTextColor || theme.COLORS.PLACEHOLDER}
+      onPress={onPressIcon3 && onPressIcon3}
+    />
+  ) : (
+      iconContent
+);
+      
+      
   const viewPassElement = password && viewPass && (
     <TouchableOpacity style={{ marginLeft: 2 }} onPress={() => setIsPassword(!isPassword)}>
       <Icon
@@ -86,6 +125,8 @@ function Input({
       {topHelp && !bottomHelp && helpContent}
       <View style={inputViewStyles}>
         {left && !right && iconInstance}
+        {left2 && !right2 && flagInstance}
+        {left3 && !right3 && iconInstance3}
         <TextInput
           style={inputStyles}
           keyboardType={type}
@@ -95,6 +136,8 @@ function Input({
           {...rest}
         />
         {right && iconInstance}
+        {right2 && flagInstance}
+        {right3 && iconInstance3}
         {viewPassElement}
       </View>
       {bottomHelp && helpContent}
@@ -120,12 +163,27 @@ Input.defaultProps = {
   iconColor: null,
   icon: null,
   family: null,
+
+
+  fla:null,
+  left2:false,
+  right2:false,
+  onPressFlag:null,
+
+  left3: true,
+  right3: false,
+  iconColor3: null,
+  icon3: null,
+  family3: null,
+  onPressIcon3:null,
+
   color: null,
   styles: {},
   iconSize: null,
   iconContent: null,
   theme: SocleTheme,
   onRef: null,
+  onPressIcon:null
 };
 
 Input.propTypes = {
@@ -152,6 +210,21 @@ Input.propTypes = {
   iconContent: PropTypes.any,
   theme: PropTypes.any,
   onRef: PropTypes.func,
+  onPressIcon: PropTypes.func,
+
+
+
+  flag:PropTypes.string,
+  left2: PropTypes.bool,
+  right2: PropTypes.bool,
+  onPressFlag:PropTypes.func,
+
+  left3: PropTypes.bool,
+  right3: PropTypes.bool,
+  iconColor3: PropTypes.string,
+  icon3: PropTypes.string,
+  family3: PropTypes.string,
+  onPressIcon3:PropTypes.func,
 };
 
 const styles = theme =>

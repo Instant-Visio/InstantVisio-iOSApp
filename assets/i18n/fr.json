@@ -370,11 +370,11 @@
     "labelCredit":"Crédits",
     "About":"À PROPOS",
     "textHome":"À la soumission du formulaire, vous serez redirigé-e vers la page d'appel en visiophone. En parallèle, un sms et / ou un e-mail sera envoyé à votre proche et l'invitera à vous rejoindre directement sur la page pour échanger avec vous.",
-    "placeholderYourName":"Votre nom",
-    "placeholderPhone":"Numéro de téléphone de votre proche",
-    "phoneInputHelp":"Numéro de téléphone ex: XXXXXXXXXX",
-    "placeholderEmail":"E-mail de votre proche",
-    "emailInputHelp":"E-mail de votre proche obligatoire",
+    "placeholderYourName":"Votre nom (ou surnom)*",
+    "placeholderPhone":"EX : 06XXXXXXXX",
+    "phoneInputHelp":"Numéro de téléphone de votre proche*",
+    "placeholderEmail":"EX : jean.dupont@gmail.com",
+    "emailInputHelp":"Adresse e-mail de votre proche*",
     "btnJoindreVotreProche":"Joindre mon proche",
     "linkEnsavoirPlus":"En savoir plus",
     "textEnsavoirPlus":"Le responsable de traitement, Stéphane Luçon, s`assure du traitement des données recueillies pour effectuer l`envoi du SMS ou de l`e-mail au correspondant. Suite à l`envoi, ces données sont effacées au bout d`un jour. Pour en savoir plus sur la gestion des données personnelles et pour exercer vos droits, veuillez vous reporter à la page",
@@ -388,5 +388,6 @@
     "MenuHome":"Accueil",
     "MenuML":"Mentions légales",
     "MenuDP":"Données Personnelles",
-    "MenuUS":"À propos de nous"
+    "MenuUS":"À propos de nous",
+    "BtnCancel":"Annuler"
 }

@@ -7,6 +7,7 @@ const mapStateToProps = state => ({
   Name: state.homereducer.getIn(['form', 'Name']),
   PhoneNumer: state.homereducer.getIn(['form', 'PhoneNumer']),
   Email: state.homereducer.getIn(['form', 'Email']),
+  CountrySelected:state.homereducer.getIn(['form', 'countrySelected']) && state.homereducer.getIn(['form', 'countrySelected']).toJS(),
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -15,6 +16,7 @@ const mapDispatchToProps = dispatch => ({
   onChangeEmail: value => dispatch(onChangeAction(['form', 'Email'])(value)),
   //setter de la videoCallId
   SetVideoCallId: value => dispatch(onChangeAction(['visio', 'videoCallId'])(value)),
+  setModalVisibleCountry: value => dispatch(onChangeAction(['form', 'modalVisible'])(value)),
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => {

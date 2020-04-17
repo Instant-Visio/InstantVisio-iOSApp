@@ -6,12 +6,12 @@ import {createStackNavigator} from 'react-navigation-stack';
 import transitionConfig from './../../../global/utils/NavAnimTransition';
 
 // screens
-import {HomePage} from './../../../global/components/screens';
+import {VisioPage} from './../../../global/components/screens';
 
-const HomeStack = createStackNavigator(
+const VisioStack = createStackNavigator(
   {
-    Home: {
-      screen: HomePage,
+    Visio:{
+      screen:VisioPage
     }
   },
   {
@@ -20,8 +20,8 @@ const HomeStack = createStackNavigator(
     },
     transitionConfig,
     headerMode: 'none',
-    initialRouteName: 'Home'    
+    initialRouteName: 'Visio'    
   }
 );
 
-export default createAppContainer(HomeStack);
+export default createAppContainer(VisioStack);

@@ -8,7 +8,14 @@ const INITIAL_STATE = fromJS({
   form: {
     Email: '',
     PhoneNumer: '',
-    Name : ''
+    Name : '',
+    countrySelected:{
+      name:"France",
+      flag:"🇫🇷",
+      code:"FR",
+      dial_code:"+33"
+   },
+    modalVisible:false
   },
   visio: {
     videoCallId:''

@@ -1,13 +1,18 @@
 import {functions} from '../firebase/firebase';
-import {Platform} from 'react-native';
+import {Alert} from 'react-native';
+import I18n from 'react-native-i18n';
+
+
 
 export const createCall = async values => {
   try {
+    const currentLocale = I18n.currentLocale().split('-');
     const result = await functions.newCall({
       name: values.personName,
       phone: values.phone,
       email: values.mail,
-      platform: 'web' 
+      lang: currentLocale[0],
+      platform: 'web',
     });
 
     if (!result || !result.data || !result.data.name) {

@@ -21,6 +21,7 @@ class Smart extends Component {
     this.redirectToDailyVisio = this.redirectToDailyVisio.bind(this);
     this.Ensavoirplus = this.Ensavoirplus.bind(this);
     this.okButon = this.okButon.bind(this);
+    this.SetModalVisibleCountries = this.SetModalVisibleCountries.bind(this);
 
     this.state = {
       loading: false,
@@ -28,21 +29,23 @@ class Smart extends Component {
       error: '',
       bySms: true,
       modalVisible: false,
-      modalMessage:'',
+      modalMessage: '',
       modalTitle: '',
-      showEnsavoirplus:false
+      showEnsavoirplus: false,
     };
   }
 
   submit = () => {
     const values = {
       personName: this.props.Name,
-      phone: this.state.bySms ? this.props.PhoneNumer  : '',
-      mail: !this.state.bySms ? this.props.Email : ''
+      phone: this.state.bySms
+        ? this.props.CountrySelected.dial_code+''+this.props.PhoneNumer
+        : '',
+      mail: !this.state.bySms ? this.props.Email : '',
     };
     if (
       !InputCheckeremail(values.mail) &&
-      !InputCheckersphoneNumber(values.phone)
+      !InputCheckersphoneNumber(this.props.PhoneNumer)
     ) {
       this.setState({error: true});
       return;
@@ -57,23 +60,22 @@ class Smart extends Component {
     // Promise.resolve('https://www.google.it')
     createCall(values)
       .then(roomName => {
-
         //set la valeur du videoCallId dans le store
         this.props.SetVideoCallId(roomName);
         //fin set la valeur du videoCallId dans le store
-        
+
         this.setState({videoCallId: roomName});
-        this.setState({modalMessage: i18nString("textFelicitaion")});
-        this.setState({modalTitle: i18nString("titleFelicitaion")});
+        this.setState({modalMessage: i18nString('textFelicitaion')});
+        this.setState({modalTitle: i18nString('titleFelicitaion')});
         this.setState({modalVisible: true});
         this.setState({error: false});
       })
       .catch(err => {
-        Alert.alert(i18nString("errorTitle"), i18nString("errorCall"), [
+        Alert.alert(i18nString('errorTitle'), i18nString('errorCall'), [
           {
-            text: i18nString("btnTry"),
-            onPress: () => console.log(err)
-          }
+            text: i18nString('btnTry'),
+            onPress: () => console.log(err),
+          },
         ]);
       })
       .finally(() => {
@@ -83,43 +85,47 @@ class Smart extends Component {
 
   checkAndAskPermissions = async () => {
     return Promise.all([
-      Platform.OS ==='android' ? this.checkPermission(PERMISSIONS.ANDROID.CAMERA) : this.checkPermission(PERMISSIONS.IOS.CAMERA),
-      Platform.OS === 'android' ? this.checkPermission(PERMISSIONS.ANDROID.RECORD_AUDIO) : this.checkPermission(PERMISSIONS.IOS.MICROPHONE)
+      Platform.OS === 'android'
+        ? this.checkPermission(PERMISSIONS.ANDROID.CAMERA)
+        : this.checkPermission(PERMISSIONS.IOS.CAMERA),
+      Platform.OS === 'android'
+        ? this.checkPermission(PERMISSIONS.ANDROID.RECORD_AUDIO)
+        : this.checkPermission(PERMISSIONS.IOS.MICROPHONE),
     ]);
-  }
+  };
 
-  checkPermission = async (permission) => {
+  checkPermission = async permission => {
     let errMessage = '';
-    return check(permission)
-      .then(result => {
-        switch (result) {
-          case RESULTS.UNAVAILABLE:
-            errMessage = 'This feature is not available (on this device / in this context)';
-            console.log(errMessage);
-            throw errMessage;
-          case RESULTS.DENIED:
-            console.log(
-              `The permission ${permission} has not been requested / is denied but requestable`,
-            );
-            return request(permission);
-          case RESULTS.GRANTED:
-            console.log('The permission is granted');
-            return true;
-          case RESULTS.BLOCKED:
-            errMessage = 'The permission is denied and not requestable anymore';
-            console.log(errMessage);
-            throw errMessage;
-        }
-      })
-  }
+    return check(permission).then(result => {
+      switch (result) {
+        case RESULTS.UNAVAILABLE:
+          errMessage =
+            'This feature is not available (on this device / in this context)';
+          console.log(errMessage);
+          throw errMessage;
+        case RESULTS.DENIED:
+          console.log(
+            `The permission ${permission} has not been requested / is denied but requestable`,
+          );
+          return request(permission);
+        case RESULTS.GRANTED:
+          console.log('The permission is granted');
+          return true;
+        case RESULTS.BLOCKED:
+          errMessage = 'The permission is denied and not requestable anymore';
+          console.log(errMessage);
+          throw errMessage;
+      }
+    });
+  };
 
-  async redirectToDailyVisio(){
-    console.log('Opening visio')
+  async redirectToDailyVisio() {
+    console.log('Opening visio');
     try {
       await this.checkAndAskPermissions();
-      this.props.navigation.navigate('Visio')
+      this.props.navigation.navigate('Visio');
       this.setState({modalVisible: false});
-    } catch(err) {
+    } catch (err) {
       console.log('Permissions error: ' + err);
     }
   }
@@ -129,7 +135,10 @@ class Smart extends Component {
 
   Ensavoirplus = () => this.setState({showEnsavoirplus: true});
   okButon = () => this.setState({showEnsavoirplus: false});
-  
+
+  SetModalVisibleCountries = () => {
+    this.props.setModalVisibleCountry(true);
+  };
 
   render() {
     return (
@@ -146,6 +155,7 @@ class Smart extends Component {
         modalVisible={this.state.modalVisible}
         Ensavoirplus={this.Ensavoirplus}
         okButon={this.okButon}
+        SetModalVisibleCountries={this.SetModalVisibleCountries}
         showEnsavoirplus={this.state.showEnsavoirplus}
         {...this.props}
       />

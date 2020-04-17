@@ -25,8 +25,8 @@ class Smart extends Component {
   }
 
   handleBackButtonClick() {
-    Orientation.lockToPortrait();
-    this.props.navigation.goBack(null);
+    Orientation.unlockAllOrientations();
+    this.props.navigation.navigate('Home');
     return true;
   }
 
