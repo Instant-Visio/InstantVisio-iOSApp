@@ -1,5 +1,6 @@
-import ReactNative from 'react-native';
-import I18n from 'react-native-i18n';
+import i18n from 'i18next';
+import * as RNLocalize from "react-native-localize";
+
 import fr from '../../../assets/i18n/fr.json';
 import en from '../../../assets/i18n/en.json';
 import ar from '../../../assets/i18n/ar.json';
@@ -9,11 +10,9 @@ import de from '../../../assets/i18n/de.json';
 import hu from '../../../assets/i18n/hu.json';
 import ro from '../../../assets/i18n/ro.json';
 import gr from '../../../assets/i18n/gr.json';
+import el from '../../../assets/i18n/el.json';
 
-
-I18n.fallbacks = true;
-
-I18n.translations = {
+const src = {
   fr,
   en,
   ar,
@@ -22,22 +21,24 @@ I18n.translations = {
   de,
   hu,
   ro,
-  gr
+  gr,
+  el
 };
-I18n.defaultLocale = 'fr';
-// I18n.locale = 'fr';
 
-const currentLocale = I18n.currentLocale();
+const currentLocale = RNLocalize.getLocales();
 
-// Is it a RTL language? (such as Hebrew and Arabic)
-export const isRTL = currentLocale.indexOf('he') === 0 || currentLocale.indexOf('ar') === 0;
+export const isRTL = currentLocale[0].isRTL;
 
-// Allow RTL alignment in RTL languages
-ReactNative.I18nManager.allowRTL(isRTL);
+export default i18n.init({
+  debug:true,
+  lng: currentLocale[0].languageCode,
+  fallbackLng:'fr',
+  resources: src,
+  isRTL: isRTL
+})
 
 export const i18nString = (name, params = {}) => {
-  const string = I18n.t(name, params);
+  const string = i18n.t(name, params);
   return string;
 };
 
-export default I18n;

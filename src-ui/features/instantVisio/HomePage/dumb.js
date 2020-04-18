@@ -61,7 +61,7 @@ const Dump = ({
       </Button>
     </Block>
     <ScrollView showsVerticalScrollIndicator={false} style={{flex: 1}}>
-      <Block center flex={2} style={{marginBottom: vars.heightUnit * 3.5}}>
+      <Block center flex={2} style={{marginBottom: vars.heightUnit * 1}}>
         <Image
           style={{width: 170, height: 160}}
           source={images.logo.visioLogo}

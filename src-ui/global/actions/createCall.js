@@ -1,17 +1,14 @@
 import {functions} from '../firebase/firebase';
-import {Alert} from 'react-native';
-import I18n from 'react-native-i18n';
-
-
+import * as RNLocalize from "react-native-localize";
 
 export const createCall = async values => {
   try {
-    const currentLocale = I18n.currentLocale().split('-');
+    const currentLocale = RNLocalize.getLocales();
     const result = await functions.newCall({
       name: values.personName,
       phone: values.phone,
       email: values.mail,
-      lang: currentLocale[0],
+      lang: currentLocale[0].languageCode,
       platform: 'web',
     });
 

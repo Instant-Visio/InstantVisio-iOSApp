@@ -12,7 +12,7 @@ class Smart extends Component {
 
 
   render() {
-    return <Dumb AboutUS={fr.AboutUS} {...this.props}/>;
+    return <Dumb AboutUS={fr.translation.AboutUS} {...this.props}/>;
   }
 }
 

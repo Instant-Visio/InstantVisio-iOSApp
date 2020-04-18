@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   },
   mainContainer: {
     flexDirection: 'column',
-    height: '60%',
+    height: '65%',
     width: '80%',
     justifyContent: 'center',
     alignItems: 'center',
@@ -98,27 +98,27 @@ const styles = StyleSheet.create({
     padding: 2,
   },
   topPart: {
-    flex: 0.5,
+    flex: 0.2,
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
     // borderWidth: 1,
     // borderColor: '#00FF00',
     paddingHorizontal: 2,
-    paddingVertical: 4,
+    // paddingVertical: 4,
   },
   middlePart: {
     flex: 1,
     width: '100%',
     // borderWidth: 1,
     // borderColor: '#FF6600',
-    padding: 4,
+    paddingHorizontal: 4,
     color: '#FFFFFF',
     fontSize: 16
   },
   bottomPart: {
-    flex: 0.2,
-    width: '100%',
+    flex: 0.15,
+    width: '90%',
     // borderWidth: 1,
     // borderColor: '#0066FF',
     flexDirection: 'row',
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     // borderWidth: 1,
     // borderColor: '#660066',
-    padding: 2,
+    // padding: 2,
     marginHorizontal: 2,
   },
   alertLinkTextStyle: {
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
   alertMessageButtonStyle: {
     width: '50%',
     paddingHorizontal: 6,
-    marginVertical: 4,
+    // marginVertical: 4,
     borderRadius: 10,
     backgroundColor: '#0064b7',
     justifyContent: 'center',
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
   alertMessageButtonnStyle: {
     width: '25%',
     paddingHorizontal: 6,
-    marginVertical: 4,
+    // marginVertical: 4,
     borderRadius: 10,
     backgroundColor: '#0064b7',
     justifyContent: 'center',

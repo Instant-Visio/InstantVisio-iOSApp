@@ -1,4 +1,9 @@
 import { fromJS } from 'immutable';
+import * as RNLocalize from "react-native-localize";
+import data from './../../global/static/data.json';
+
+const locales = RNLocalize.getLocales();
+const country= data.find(item=>item.code==locales[0].countryCode);
 
 import {
   ON_CHANGE
@@ -10,10 +15,10 @@ const INITIAL_STATE = fromJS({
     PhoneNumer: '',
     Name : '',
     countrySelected:{
-      name:"France",
-      flag:"🇫🇷",
-      code:"FR",
-      dial_code:"+33"
+      name:country.name,
+      flag:country.flag,
+      code:country.code,
+      dial_code:country.dial_code
    },
     modalVisible:false
   },

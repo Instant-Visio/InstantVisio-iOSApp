@@ -12,7 +12,7 @@ class Smart extends Component {
 
 
   render() {
-    return <Dumb DonneePersonnelle={fr.DonneePersonnelle} {...this.props}/>;
+    return <Dumb DonneePersonnelle={fr.translation.DonneePersonnelle} {...this.props}/>;
   }
 }
 
