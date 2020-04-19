@@ -6,7 +6,7 @@ const Dump = ({navigation, videoCallIdProps}) => (
     {/** tu peux l'utiliser ici egalement**/}
     <WebView
       style={{flex:1}}
-      source={{uri: `https://instantvisio.daily.co/${videoCallIdProps}`}}
+      source={{uri: `https://instantvisio.com/visio/${videoCallIdProps}`}}
     />
   </>
 );

@@ -8,7 +8,7 @@ export const createCall = async values => {
       name: values.personName,
       phone: values.phone,
       email: values.mail,
-      lang: currentLocale[0].languageCode,
+      lang: currentLocale[0].languageCode==='el'?'gr':currentLocale[0].languageCode,
       platform: 'web',
     });
 

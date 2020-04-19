@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Orientation from 'react-native-orientation';
+// import Orientation from 'react-native-orientation';
 import { BackHandler } from 'react-native';
 import Dumb from './dumb';
 
@@ -10,7 +10,6 @@ class Smart extends Component {
   }
 
   componentWillMount() {
-    Orientation.lockToLandscape();
     BackHandler.addEventListener(
       'hardwareBackPress',
       this.handleBackButtonClick,
@@ -25,7 +24,6 @@ class Smart extends Component {
   }
 
   handleBackButtonClick() {
-    Orientation.unlockAllOrientations();
     this.props.navigation.navigate('Home');
     return true;
   }
