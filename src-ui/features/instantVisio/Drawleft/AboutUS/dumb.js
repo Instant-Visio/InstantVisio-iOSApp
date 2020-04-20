@@ -6,28 +6,28 @@ import {
   Button,
   NavBar,
   theme,
-  Icon
+  Icon,
 } from './../../../../global/components/Socles';
 import images from './../../../../global/components/images';
-import {AboutUS} from './../../../../global/static/data';
+import {i18nString} from './../../../../global/i18n';
 import style from './style';
 
-const Dump = ({navigation}) => (
+const Dump = ({navigation, AboutUS}) => (
   <>
     <NavBar
-      title='A PROPOS'
+      title={i18nString('About').toUpperCase()}
       left={
         <Button
-        onlyIcon
-        icon="navigate-before"
-        iconFamily="ArgonExtra"
-        iconSize={35}
-        color="transparent"
-        iconColor="#666666"
-        onPress={() => navigation.navigate('Home')}
-        style={{width: 40, height: 40}}>
-        back
-      </Button>
+          onlyIcon
+          icon="navigate-before"
+          iconFamily="ArgonExtra"
+          iconSize={35}
+          color="transparent"
+          iconColor="#666666"
+          onPress={() => navigation.navigate('Home')}
+          style={{width: 40, height: 40}}>
+          back
+        </Button>
       }
       leftStyle={{paddingVertical: 12, flex: 0.2}}
     />
@@ -37,7 +37,9 @@ const Dump = ({navigation}) => (
           style={{width: 150, height: 150}}
           source={images.logo.visioLogo}
         />
-        <Text style={{fontSize: 26, fontWeight: 'bold', color: '#696969'}}>Blog</Text>
+        <Text style={{fontSize: 26, fontWeight: 'bold', color: '#696969'}}>
+          {i18nString('labelCredit')}
+        </Text>
         {AboutUS.map(about => (
           <Block key={about.id}>
             <Text
@@ -48,7 +50,7 @@ const Dump = ({navigation}) => (
                 color: '#696969',
                 fontSize: 20,
               }}>
-              {about.titre}
+              {i18nString('AboutUS.' + (about.id - 1) + '.titre')}
             </Text>
             {about.acteurs.map(acteur => (
               <Block row key={acteur.id} style={{marginVertical: 10}}>
@@ -60,14 +62,35 @@ const Dump = ({navigation}) => (
                 ) : (
                   <Image
                     style={{width: 70, height: 70}}
-                    source={acteur.image}
+                    source={
+                      acteur.id - 1 === 0
+                        ? i18nString(
+                            'AboutUS.' +
+                              (about.id - 1) +
+                              '.acteurs.' +
+                              (acteur.id - 1) +
+                              '.image',
+                            {DailyImage: images.icon.daily},
+                          )
+                        : i18nString(
+                            'AboutUS.' +
+                              (about.id - 1) +
+                              '.acteurs.' +
+                              (acteur.id - 1) +
+                              '.image',
+                            {OVHcloudImage: images.icon.ovh},
+                          )
+                    }
                   />
                 )}
                 <Block flex style={{marginHorizontal: 25}}>
                   <Text>{acteur.nom}</Text>
 
                   {acteur.site ? (
-                    <Text>Site : {acteur.site}</Text>
+                    <Text>
+                      {i18nString('labelSite')}
+                      {acteur.site}
+                    </Text>
                   ) : (
                     <Button
                       onlyIcon

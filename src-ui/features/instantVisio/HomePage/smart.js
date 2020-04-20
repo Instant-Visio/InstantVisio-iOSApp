@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
-import {Linking, Alert, PermissionsAndroid} from 'react-native';
+import {Alert, Platform} from 'react-native';
 import {createCall} from './../../../global/actions/createCall';
 import {
   InputCheckeremail,
   InputCheckersphoneNumber,
 } from './../../../global/utils';
+import {i18nString} from './../../../global/i18n';
 // import Proptypes if needed
+import {request} from 'react-native-permissions';
+import {check, PERMISSIONS, RESULTS} from 'react-native-permissions';
 
 import Dumb from './dumb';
 
@@ -18,6 +21,7 @@ class Smart extends Component {
     this.redirectToDailyVisio = this.redirectToDailyVisio.bind(this);
     this.Ensavoirplus = this.Ensavoirplus.bind(this);
     this.okButon = this.okButon.bind(this);
+    this.SetModalVisibleCountries = this.SetModalVisibleCountries.bind(this);
 
     this.state = {
       loading: false,
@@ -25,21 +29,23 @@ class Smart extends Component {
       error: '',
       bySms: true,
       modalVisible: false,
-      modalMessage:'',
+      modalMessage: '',
       modalTitle: '',
-      showEnsavoirplus:false
+      showEnsavoirplus: false,
     };
   }
 
   submit = () => {
     const values = {
       personName: this.props.Name,
-      phone: this.state.bySms ? this.props.PhoneNumer  : '',
-      mail: !this.state.bySms ? this.props.Email : ''
+      phone: this.state.bySms
+        ? this.props.CountrySelected.dial_code+''+this.props.PhoneNumer
+        : '',
+      mail: !this.state.bySms ? this.props.Email : '',
     };
     if (
       !InputCheckeremail(values.mail) &&
-      !InputCheckersphoneNumber(values.phone)
+      !InputCheckersphoneNumber(this.props.PhoneNumer)
     ) {
       this.setState({error: true});
       return;
@@ -51,20 +57,25 @@ class Smart extends Component {
     }
     //send mail/sms
     this.setState({loading: true});
+    // Promise.resolve('https://www.google.it')
     createCall(values)
       .then(roomName => {
+        //set la valeur du videoCallId dans le store
+        this.props.SetVideoCallId(roomName);
+        //fin set la valeur du videoCallId dans le store
+
         this.setState({videoCallId: roomName});
-        this.setState({modalMessage: 'Une invitation a été envoyée à votre proche pour vous rejoindre en visiophonie'});
-        this.setState({modalTitle: 'Félicitations'});
+        this.setState({modalMessage: i18nString('textFelicitaion')});
+        this.setState({modalTitle: i18nString('titleFelicitaion')});
         this.setState({modalVisible: true});
         this.setState({error: false});
       })
       .catch(err => {
-        Alert.alert('Error!', 'Une erreur est survenu reesayer plutard', [
+        Alert.alert(i18nString('errorTitle'), i18nString('errorCall'), [
           {
-            text: 'Réessayer',
-            onPress: () => console.log(err)
-          }
+            text: i18nString('btnTry'),
+            onPress: () => console.log(err),
+          },
         ]);
       })
       .finally(() => {
@@ -72,9 +83,51 @@ class Smart extends Component {
       });
   };
 
-  redirectToDailyVisio(){
-    Linking.openURL(`https://instantvisio.daily.co/${this.state.videoCallId}`)
-    this.setState({modalVisible: false});
+  checkAndAskPermissions = async () => {
+    return Promise.all([
+      Platform.OS === 'android'
+        ? this.checkPermission(PERMISSIONS.ANDROID.CAMERA)
+        : this.checkPermission(PERMISSIONS.IOS.CAMERA),
+      Platform.OS === 'android'
+        ? this.checkPermission(PERMISSIONS.ANDROID.RECORD_AUDIO)
+        : this.checkPermission(PERMISSIONS.IOS.MICROPHONE),
+    ]);
+  };
+
+  checkPermission = async permission => {
+    let errMessage = '';
+    return check(permission).then(result => {
+      switch (result) {
+        case RESULTS.UNAVAILABLE:
+          errMessage =
+            'This feature is not available (on this device / in this context)';
+          console.log(errMessage);
+          throw errMessage;
+        case RESULTS.DENIED:
+          console.log(
+            `The permission ${permission} has not been requested / is denied but requestable`,
+          );
+          return request(permission);
+        case RESULTS.GRANTED:
+          console.log('The permission is granted');
+          return true;
+        case RESULTS.BLOCKED:
+          errMessage = 'The permission is denied and not requestable anymore';
+          console.log(errMessage);
+          throw errMessage;
+      }
+    });
+  };
+
+  async redirectToDailyVisio() {
+    console.log('Opening visio');
+    try {
+      await this.checkAndAskPermissions();
+      this.props.navigation.navigate('Visio');
+      this.setState({modalVisible: false});
+    } catch (err) {
+      console.log('Permissions error: ' + err);
+    }
   }
 
   btnSwitchEmail = () => this.setState({bySms: false});
@@ -82,7 +135,10 @@ class Smart extends Component {
 
   Ensavoirplus = () => this.setState({showEnsavoirplus: true});
   okButon = () => this.setState({showEnsavoirplus: false});
-  
+
+  SetModalVisibleCountries = () => {
+    this.props.setModalVisibleCountry(true);
+  };
 
   render() {
     return (
@@ -99,6 +155,7 @@ class Smart extends Component {
         modalVisible={this.state.modalVisible}
         Ensavoirplus={this.Ensavoirplus}
         okButon={this.okButon}
+        SetModalVisibleCountries={this.SetModalVisibleCountries}
         showEnsavoirplus={this.state.showEnsavoirplus}
         {...this.props}
       />

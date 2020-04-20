@@ -226,13 +226,13 @@
                 {
                     "id":1,
                     "titreGras":"",
-                    "Text":"\r\nThe information collected through the form is neither recorded nor stored. The person in charge of data management is St\u00E9phane Lu\u00E7on, residing 5 mont\u00E9e des Chrestianne, Pierrevert.\r\n\r\nThe information marked by an asterisk in the form is mandatory as it is required to send the SMS or e-mail to your contact.\r\n\r\nThe collected data will be shared with the following recipients: OVH T\u00E9l\u00E9com, the company sending the SMS, and SendMail, the company sending the e-mails.\r\n\r\nYour personal data will be stored for no more than one day.\r\n\r\nYou can access your personal data to correct or erase any information, or to exercise your right to privacy regarding data processing.\r\n\r\nSee cnil.fr for further information regarding your rights.\r\n\r\nTo exercise your rights or for any other questions regarding data processing by our service, please contact St\u00E9phane Lu\u00E7on: contact@instantvisio.com or +33(0)7 87 71 57 87.\r\n\r\nIf, after getting in touch with us, you still consider that your rights to data privacy are violated, you can file a complaint with the CNIL."                
+                    "Text":"\nLas informaciones recogidas en el cuestionario no son registradas, ni siquiera, acumuladas. El encargado del tratamento, o de no hacerlo, se llama Stéphane Luçon, 5 montée des Chrestianne, Pierrevert (Francia).\nEs obligarorio enseñar los datos señalados con un asterisco en el cuestionario. En el caso contrario, quedara imposible enviar un SMS o e-mail a su familiar.\nLos datos recibidos estaran transmitidos a estos dos unicos destinararios : OVH Télécom, compania asegurando la distribucion de los mensajes SMS y SendMail, compania encargada de la distribucio de los mensajes email.\nEstaran guardados un solo dia.\nSe puede consultar sus propios datos, cambiarlos, pedir que sean borrados y usar su derecho a limitar el tratamiento de sus propios datos.\nConsultar el sitio cnil.fr para mas informaciones sobre sus derechos.\nPara el uso de estos derechos y por cualquiera pregunta sobre el tratamiento de sus datos en este dispositivo, gracias por conectarse con Stéphane Luçon, contact@instantvisio.com, téléphone 0787 715 787.\nSi Ud, despues de contactarnos, considera que sus derechos « Informatique et Libertés » no son acatados, puede reclamar por escrito a la CNIL.\n"                
                 } 
             ],
             "AboutUS":[
                 {
                     "id":1,
-                    "titre":"Creator",
+                    "titre":"Creativos",
                     "acteurs":[
                         {
                             "id":1,
@@ -244,7 +244,7 @@
                 },
                 {
                     "id":2,
-                    "titre":"Developers",
+                    "titre":"Desarolladores",
                     "acteurs":[
                         {
                             "id":1,
@@ -286,7 +286,7 @@
                 },
                 {
                     "id":3,
-                    "titre":"UX designers",
+                    "titre":"Designers UX",
                     "acteurs":[
                         {
                             "id":1,
@@ -304,7 +304,7 @@
                 },
                 {
                     "id":4,
-                    "titre":"Graphic designer",
+                    "titre":"Grafistas",
                     "acteurs":[
                         {
                             "id":1,
@@ -316,7 +316,7 @@
                 },
                 {
                     "id":5,
-                    "titre":"Partners",
+                    "titre":"Socios",
                     "acteurs":[
                         {
                             "id":1,
@@ -335,31 +335,31 @@
                     ]
                 }
             ],
-            "labelSite":"website : ",
-            "labelMentionLegal":"Legal mentions",
-            "labelDonneesPersonnelle":"Personal data",
-            "labelCredit":"Credits",
-            "About":"About us",
-            "textHome":"When submitting the form, you will be redirected to the videophone call page. In parallel, an sms and / or an e-mail will be sent to your loved one and the invited to join you directly on the page to exchange with you.",
-            "placeholderYourName":"your name (or nickname)*",
-            "placeholderPhone":"E.g. : 06XXXXXXXX",
-            "phoneInputHelp":"Phone number of your close one*",
-            "placeholderEmail":"E.g. jane.doe@gmail.com",
-            "emailInputHelp":"E-mail address of your close one*",
-            "btnJoindreVotreProche":"Contact my close one",
-            "linkEnsavoirPlus":"Find out more",
-            "textEnsavoirPlus":"Fields marked by an asterisk are mandatory.\nThe person in charge of data, Stéphane Luçon, processes the collected information before sending the SMS or e-mail to your contact. Your information will be deleted one day after it has been sent. To learn more about data privacy or to exercise your rights regarding your personal data, please see section",
-            "btnSMS":"By SMS",
-            "btnEMAIL":"By E-MAIL",
-            "textFelicitaion":"An invitation has been sent to your loved one to join you by videophone.",
-            "titleFelicitaion":"Congratulations",
-            "errorCall":"An error occured try again later",
+            "labelSite":"sitio de Internet : ",
+            "labelMentionLegal":"Menciones legales",
+            "labelDonneesPersonnelle":"Datos personales",
+            "labelCredit":"Creditos",
+            "About":"A propósito de nosotros",
+            "textHome":"Al enviar el formulario, será redirigido a la página de llamada de videoteléfono. Paralelamente, se enviará un SMS y / o un correo electrónico a su ser querido y los invitará a unirse a usted directamente en la página para conversar con usted.",
+            "placeholderYourName":"Tu nombre (o apodo)*",
+            "placeholderPhone":"EX : 06XXXXXXXX",
+            "phoneInputHelp":"Numero de telefono de su familiar *",
+            "placeholderEmail":"EX : jean.dupont@gmail.com",
+            "emailInputHelp":"Direccion e-mail de su familiar *",
+            "btnJoindreVotreProche":"Conectarme con mi familiar",
+            "linkEnsavoirPlus":"Más información",
+            "textEnsavoirPlus":"Los campos señalados con un asterisco son obligatorios.\nEl encargado del tratamiento, Stéphane Luçon verifica los datos conseguidos para mandar el SMS o el e-mail al familiar. Despues del envio, los datos son borrados al final del dia. Para conseguir mas informaciones sobre la gestion de los datos y la proteccion de sus derechos, gracias por dirigirse a la pagina",
+            "btnSMS":"Por SMS",
+            "btnEMAIL":"Por E-MAIL",
+            "textFelicitaion":"Una invitación para ser enviada a su ser querido para unirse a usted por videoteléfono.",
+            "titleFelicitaion":"Felicidades",
+            "errorCall":"Se produjo un error, intente nuevamente más tarde.",
             "errorTitle":"Error !",
-            "btnTry":"try again",
-            "MenuHome":"Home",
-            "MenuML":"Legal mentions",
-            "MenuDP":"Personal data",
-            "MenuUS":"About us",
-            "BtnCancel":"Cancel"
+            "btnTry":"Volver a intentar",
+            "MenuHome":"Bienvenida",
+            "MenuML":"Menciones legales",
+            "MenuDP":"Datos personales",
+            "MenuUS":"A propósito de nosotros",
+            "BtnCancel":"Anular"
         }
 }

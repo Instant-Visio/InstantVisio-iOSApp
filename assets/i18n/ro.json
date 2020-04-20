@@ -1,0 +1,365 @@
+{
+    "translation":{
+            "MentionLegal" : [
+                {
+                    "id":1,
+                    "titre":"1. Prezentarea site-ului",
+                    "article":[
+                        {
+                            "id":1,
+                            "titreGras":"",
+                            "Text":"Conform articolului 6 din Legea nr. 2004-575 din 21 iunie 2004 privind încrederea în economia digitală, utilizatorii site-ului sunt informați https://instantvisio.com referitor la identitatea diferitelor părți implicate în implementarea și monitorizarea acesteia:"
+                        },
+                        {
+                            "id":2,
+                            "titreGras":"Proprietar :",
+                            "Text":"Stéphane Luçon – 5, Montée des Chrestiannes, 04860 PIERREVERT, Franța, Pământ, Sistemul solar, Norul Interstelar Local, Bula Locală, Brațul Orion, Calea Lactee."
+                        },
+                        {
+                            "id":3,
+                            "titreGras":"Creator :",
+                            "Text":" Instant Visio"
+                        },
+                        {
+                            "id":4,
+                            "titreGras":"Responsabil de publicare :",
+                            "Text":"Abeba Ngwe – contact@instantvisio.com – responsabil de publicare poate fi o persoană fizică sau juridică."
+                        },
+                        {
+                            "id":5,
+                            "titreGras":"Webmaster :",
+                            "Text":"Abeba Ngwe – contact@instantvisio.com"
+                        },
+                        {
+                            "id":6,
+                            "titreGras":"Host : ",
+                            "Text":"Google, Inc. – Mountain View 1600 Amphitheatre Parkway Mountain View, CA 94043 United States"
+                        },
+                        {
+                            "id":7,
+                            "titreGras":"",
+                            "Text":"Credite : Abeba Ngwe, Nicolas Tchouanmou, Hugo Gresse, Ophélie Strezlec, Stéphane Luçon.\r\n\r\nModelul avizelor legale este oferit de Subdelirium.com Avize legale."
+                        }
+                    ]
+                }, 
+                {
+                    "id":2,
+                    "titre":"2. Condiții generale de utilizare a site-ului și a serviciilor oferite",
+                    "article":[
+                        {
+                            "id":1,
+                            "titreGras":"",
+                            "Text":"Utilizarea site-ului https://instantvisio.com implică acceptarea deplină a condițiilor generale de utilizare descrise mai jos. Aceste condiții de utilizare pot fi modificate sau completate în orice moment, utilizatorii site-ului https://instantvisio.com sunt, prin urmare, invitați să le consulte. în mod regulat."
+                        },
+                        {
+                            "id":2,
+                            "titreGras":"",
+                            "Text":"Acest site este în mod normal accesibil utilizatorilor în orice moment. Cu toate acestea, Stéphane Luçon poate decide o întrerupere din cauza întreținerii tehnice, care se va strădui să comunice utilizatorilor înainte de datele și orele intervenției."
+                        },
+                        {
+                            "id":3,
+                            "titreGras":"",
+                            "Text":"Site-ul https://instantvisio.com este actualizat regulat de Abeba Ngwe. În același mod, notificările legale pot fi modificate în orice moment: acestea se aplică totuși utilizatorului care este invitat să se refere la acestea cât mai des pentru a lua notă de acestea."
+                        }
+                    ]
+                    
+                }, 
+                {
+                    "id":3,
+                    "titre":"3. Descrierea serviciilor furnizate",
+                    "article":[
+                        {
+                            "id":1,
+                            "titreGras":"",
+                            "Text":"Scopul site-ului https://instantvisio.com este de a furniza informații cu privire la toate activitățile companiei."
+                        },
+                        {
+                            "id":2,
+                            "titreGras":"",
+                            "Text":"Stéphane Luçon se străduiește să ofere, prin intermediul site-ului https://instantvisio.com informații cât mai precise. Cu toate acestea, nu poate fi făcut responsabil pentru omisiuni, inexactități și deficiențe în actualizare, fie realizate în nume personal, fie de către parteneri terți care furnizează aceste informații."
+                        },
+                        {
+                            "id":3,
+                            "titreGras":"",
+                            "Text":"Toate informațiile indicate pe site https://instantvisio.com au doar scop informativ și pot fi modificate. Mai mult, informațiile de pe site https://instantvisio.com nu sunt exhaustive. Acestea sunt supuse unor modificări efectuate ulterior postării lor online."
+                        }
+                    ]
+                    
+                }, 
+                {
+                    "id":4,
+                    "titre":"4. Limitări contractuale privind datele tehnice",
+                    "article":[
+                        {
+                            "id":1,
+                            "titreGras":"",
+                            "Text":"Site-ul folosește tehnologia JavaScript."
+                        },
+                        {
+                            "id":2,
+                            "titreGras":"",
+                            "Text":"Site-ul nu poate fi făcut responsabil pentru pagubele materiale legate de utilizarea sa. În plus, utilizatorul site-ului este de acord să acceseze site-ul folosind echipamente recente, care nu conțin viruși, cu un browser actualizat de ultimă generație."
+                        },
+                        {
+                            "id":3,
+                            "titreGras":"",
+                            "Text":""
+                        }
+                    ]  
+                }, 
+                {
+                    "id":5,
+                    "titre":"5. Proprietate intelectuală și contrafaceri",
+                    "article":[
+                        {
+                            "id":1,
+                            "titreGras":"",
+                            "Text":"Le site et le logiciel sont fournis sous licences open source MIT : “\n\nCopyright (c) 2020 - Stéphane Luçon - Abeba Ngwe - Nicolas Tchouanmou - Hugo Gresse - Ophélie Strezlec - Kanga Dominique Bernard - Mattia Primavera Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+                        },
+                        {
+                            "id":2,
+                            "titreGras":"",
+                            "Text":"Orice reproducere, reprezentare, modificare, publicare, adaptare a tuturor sau a elementelor site-ului, indiferent de mijloacele sau procesele utilizate, este interzisă fără acordul prealabil în scris al lui Stéphane Luçon. Orice utilizare neautorizată a site-ului sau a oricăruia dintre elementele pe care le conține, va fi considerată a constitui o încălcare și urmărită penal în conformitate cu prevederile articolelor L.335-2 și ale Codului de proprietate intelectuală."
+                        }
+                    ]  
+                }, 
+                {
+                    "id":6,
+                    "titre":"6. Limitări de răspundere",
+                    "article":[
+                        {
+                            "id":1,
+                            "titreGras":"",
+                            "Text":"Stéphane Luçon nu poate fi făcut responsabil pentru daunele directe și indirecte cauzate echipamentului utilizatorului, atunci când accesează site-ul https://instantvisio.com și rezultând fie din utilizarea de materiale care nu răspund la specificațiile indicate la punctul 4, fie apariția unui bug sau o incompatibilitate."
+                        },
+                        {
+                            "id":2,
+                            "titreGras":"",
+                            "Text":"Stéphane Luçon nu poate fi, de asemenea, răspunzător pentru daune indirecte (cum ar fi pierderea pieței sau pierderea oportunității) rezultate din utilizarea site-ului https://instantvisio.com."
+                        },
+                        {
+                            "id":3,
+                            "titreGras":"",
+                            "Text":"Utilizatorii au la dispoziție spații interactive (posibilitatea de a pune întrebări în spațiul de contact). Stéphane Luçon își rezervă dreptul de a șterge, fără notificare prealabilă, orice conținut postat în acest spațiu care ar încălca legislația aplicabilă în Franța, în special dispozițiile referitoare la protecția datelor. Dacă este necesar, Stéphane Luçon își rezervă, de asemenea, dreptul de a contesta responsabilitatea civilă și / sau penală a utilizatorului, în special în cazul unui mesaj rasist, abuziv, defăimător sau pornografic, indiferent de mediul folosit (text, fotografie…)."
+                        }
+                    ]  
+                }, 
+                {
+                    "id":7,
+                    "titre":"7. Linkuri și cookies",
+                    "article":[
+                        {
+                            "id":1,
+                            "titreGras":"",
+                            "Text":"Site-ul https://instantvisio.com conține un anumit număr de link-uri hipertext către alte site-uri, înființat cu autorizarea Stéphane Luçon. Cu toate acestea, Stéphane Luçon nu are posibilitatea de a verifica conținutul site-urilor vizitate și, prin urmare, nu își va asuma nicio responsabilitate pentru acest fapt."
+                        },
+                        {
+                            "id":2,
+                            "titreGras":"",
+                            "Text":"Navigarea pe site https://instantvisio.com este probabil să provoace instalarea cookie-urilor pe computerul utilizatorului. Un cookie este un fișier mic, care nu permite identificarea utilizatorului, dar care înregistrează informații referitoare la navigarea unui computer pe un site. Datele astfel obținute sunt destinate să faciliteze navigarea ulterioară pe site și sunt, de asemenea, destinate să permită diverse măsuri de participare."
+                        },
+                        {
+                            "id":3,
+                            "titreGras":"",
+                            "Text":"Refuzul instalării unui cookie poate face imposibil accesul la anumite servicii. Utilizatorul poate însă să-și configureze computerul după cum urmează, pentru a refuza instalarea cookie-urilor:"
+                        },
+                        {
+                            "id":4,
+                            "titreGras":"",
+                            "Text":"În Internet Explorer: funcția instrument (pictogramă în formă de roată dințată în dreapta sus) / opțiuni internet. Faceți clic pe Confidențialitate și alegeți Blocați toate cookie -urile. Validați pe OK."
+                        },
+                        {
+                            "id":5,
+                            "titreGras":"",
+                            "Text":"În Firefox: în partea de sus a ferestrei browserului, faceți clic pe butonul Firefox, apoi mergeți la Opțiuni. Faceți clic pe Confidențialitate. Configurați regulile de stocare cu: utilizați parametrii personalizați pentru istoric. În cele din urmă debifați-l pentru a dezactiva cookie-urile."
+                        },
+                        {
+                            "id":6,
+                            "titreGras":"",
+                            "Text":"În Safari: faceți clic în dreapta sus pe pictograma meniului (simbolizată de o roată dințată). Selectați Setări. Faceți clic pe Afișați setări avansate. În secțiunea \"Confidențialitate\", faceți clic pe Setări conținut. În secțiunea \"Cookies\", puteți bloca cookie-urile.\r\n\r\nÎn Chrome: faceți clic în dreapta sus, pe pictograma meniului (simbolizată prin trei linii orizontale). Selectați Setări. Faceți clic pe Afișați setări avansate. În secțiunea \"Confidențialitate\", faceți clic pe preferințe. În fila \"Confidențialitate\", puteți bloca cookie-urile."
+                        }
+                    ]  
+                },
+                {
+                    "id":8,
+                    "titre":"8. Legea aplicabilă și atribuirea competenței juridice",
+                    "article":[
+                        {
+                            "id":1,
+                            "titreGras":"",
+                            "Text":"Orice litigiu în legătură cu utilizarea site-ului https://instantvisio.com este supus dreptului francez. O jurisdicție exclusivă este dată instanțelor competente din Paris."
+                        }
+                    ]  
+                },
+                {
+                    "id":9,
+                    "titre":"9. Principalele legi aplicabile",
+                    "article":[
+                        {
+                            "id":1,
+                            "titreGras":"",
+                            "Text":"Legea nr. 78-17 din 6 ianuarie 1978, modificată în special prin legea nr. 2004-801 din 6 august 2004 privind prelucrarea datelor, a fișierelor și referitoare la libertăți."
+                        },            {
+                            "id":2,
+                            "titreGras":"",
+                            "Text":"Legea nr. 2004-575 din 21 iunie 2004 privind încrederea în economia digitală."
+                        }
+                    ]  
+                },
+                {
+                    "id":10,
+                    "titre":"10. Lexic",
+                    "article":[
+                        {
+                            "id":1,
+                            "titreGras":"",
+                            "Text":"Utilizator: utilizator de internet care se conectează, folosind site-ul menționat mai sus."
+                        },            {
+                            "id":2,
+                            "titreGras":"",
+                            "Text":"Informații cu caracter personal: \"informații care permit, sub orice formă, direct sau indirect, identificarea persoanelor fizice cărora li se aplică\" (articolul 4 din legea nr. 78-17 din 6 ianuarie 1978)."
+                        }
+                    ]  
+                }
+            ],
+            "DonneePersonnelle":[
+                {
+                    "id":1,
+                    "titreGras":"",
+                    "Text":"\nResponsabilul sistemului, Stéphane Luçon, se asigură de utilizarea datelor furnizate pentru trimiterea sms-ului sau emailului către apropiatul dumneavoastră. Pentru mai multe detalii referitoare la gestionarea datelor personale și exercitarea drepturilor dvs. mergeți pe pagina Date personale\nInformațiile colectate în chestionar nu sunt nici înregistrate, nici stocate. Responsabil de stocarea datelor și de prelucrarea acestora datelor este Stéphane Luçon, 5 Montée des Chrestianne, Pierrevert.\nTrebuie obligatoriu furnizate datele marcate cu un asterisc în chestionar. În caz contrar, va fi imposibil să trimiteți mesajul SMS sau e-mail către corespondent.\nDatele colectate vor fi comunicate numai următorilor destinatari: OVH Télécom, companie care asigură distribuirea mesajelor SMS și SendMail, companie care asigură distribuirea mesajelor prin e-mail.\nDatele se păstrează o zi.\nPuteți accesa datele care vă privesc, rectifica, solicita\nștergerea acestora sau vă puteți exercita dreptul de a limita prelucrarea datelor dumneavoastră.\nAccesați cnil.fr pentru mai multe informații despre drepturile dvs.\nPentru a exercita aceste drepturi sau pentru orice întrebare cu privire la prelucrarea datelor dumneavoastră în acest sistem, îl puteți contacta pe responsabilul, Stéphane Luçon, contact@instantvisio.com, telefon 0787 715 787.\nDacă credeți, după ce ne-ați contactat, că drepturile dvs. privind protecția datelor nu\nsunt respectate, puteți trimite o reclamație către CNIL."                            
+                } 
+            ],
+            "AboutUS":[
+                {
+                    "id":1,
+                    "titre":"Creator",
+                    "acteurs":[
+                        {
+                            "id":1,
+                            "image":"",
+                            "nom":"Stéphane Luçon",
+                            "link":""
+                        }
+                    ]
+                },
+                {
+                    "id":2,
+                    "titre":"Dezvoltatori",
+                    "acteurs":[
+                        {
+                            "id":1,
+                            "image":"",
+                            "nom":"Abeba Ngwe",
+                            "link":""
+                        },
+                        {
+                            "id":2,
+                            "image":"",
+                            "nom":"Nicolas Tchouanmou",
+                            "link":""
+                        },
+                        {
+                            "id":3,
+                            "image":"",
+                            "nom":"Hugo Gresse",
+                            "link":""
+                        },
+                        {
+                            "id":4,
+                            "image":"",
+                            "nom":"Stéphane Luçon",
+                            "link":""
+                        },
+                        {
+                            "id":5,
+                            "image":"",
+                            "nom":"Kanga Dominique Bernard",
+                            "link":""
+                        },
+                        {
+                            "id":6,
+                            "image":"",
+                            "nom":"Mattia Primavera",
+                            "link":""
+                        }
+                    ]
+                },
+                {
+                    "id":3,
+                    "titre":"Designeri UX",
+                    "acteurs":[
+                        {
+                            "id":1,
+                            "image":"",
+                            "nom":"Sébastien L'Hoste",
+                            "link":""
+                        },
+                        {
+                            "id":2,
+                            "image":"",
+                            "nom":"Antoine Deglesne",
+                            "link":""
+                        }
+                    ]
+                },
+                {
+                    "id":4,
+                    "titre":"Grafician",
+                    "acteurs":[
+                        {
+                            "id":1,
+                            "image":"",
+                            "nom":"Ophélie Strezlec",
+                            "link":""
+                        }
+                    ]
+                },
+                {
+                    "id":5,
+                    "titre":"Parteneri",
+                    "acteurs":[
+                        {
+                            "id":1,
+                            "image":"{{DailyImage}}",
+                            "nom":"Daily.co",
+                            "link":"",
+                            "site":"www.Daily.co"
+                        },
+                        {
+                            "id":2,
+                            "image":"{{OVHcloudImage}}",
+                            "nom":"OVHcloud",
+                            "link":"",
+                            "site":"www.OVHcloud.com"
+                        }
+                    ]
+                }
+            ],
+            "labelSite":"site-ul: ",
+            "labelMentionLegal":"Mențiuni legale",
+            "labelDonneesPersonnelle":"Date personale",
+            "labelCredit":"Contribuții",
+            "About":"DESPRE",
+            "textHome":"Când trimiteți formularul, veți fi redirecționat către pagina de apel video. În paralel, un SMS și / sau un e-mail vor fi trimise persoanei dragi și îi va invita să se alăture direct dvs. pe pagină pentru a discuta cu dvs.",
+            "placeholderYourName":"Prenumele dumneavoastră",
+            "placeholderPhone":"EX. : 07XXXXXXXX",
+            "phoneInputHelp":"Numărul de telefon a persoanei dragi*",
+            "placeholderEmail":"EX : maria.popescu@gmail.com",
+            "emailInputHelp":"Adresa de e-mail a persoanei dragi*",
+            "btnJoindreVotreProche":"Contactați persoana iubită",
+            "linkEnsavoirPlus":"Aflați mai multe",
+            "textEnsavoirPlus":"Câmpurile marcate cu asterisc sunt obligatorii.\nResponsabilul sistemului, Stéphane Luçon, se asigură de utilizarea datelor furnizate pentru trimiterea sms-ului sau emailului către apropiatul dumneavoastră. Pentru mai multe detalii referitoare la gestionarea datelor personale și exercitarea drepturilor dvs. mergeți pe pagina",
+            "btnSMS":"Prin SMS",
+            "btnEMAIL":"Pe MAIL",
+            "textFelicitaion":"O invitație a fost trimisă persoanei dragi pentru a vă alătura video.",
+            "titleFelicitaion":"Felicitări",
+            "errorCall":"A apărut o eroare. Încercați din nou mai târziu",
+            "errorTitle":"Eroare !",
+            "btnTry":"Reîncercați",
+            "MenuHome":"Principală",
+            "MenuML":"Mențiuni legale",
+            "MenuDP":"Date personale",
+            "MenuUS":"Despre noi",
+            "BtnCancel":"Anula"
+        }
+}

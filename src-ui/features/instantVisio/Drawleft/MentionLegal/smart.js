@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import fr from './../../../../../assets/i18n/fr.json';
 
 import Dumb from './dumb';
 
@@ -11,7 +12,7 @@ class Smart extends Component {
 
 
   render() {
-    return <Dumb {...this.props}/>;
+    return <Dumb MentionLegal={fr.translation.MentionLegal} {...this.props}/>;
   }
 }
 

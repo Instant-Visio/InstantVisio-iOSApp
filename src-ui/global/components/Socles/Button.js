@@ -128,7 +128,7 @@ Button.defaultProps = {
   shadowless: false,
   shadowColor: false,
   onlyIcon: false,
-  iconPosition:false,
+  iconPosition:'',
   loading: false,
   loadingSize: 'small',
   opacity: 0.8,

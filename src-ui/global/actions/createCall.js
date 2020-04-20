@@ -1,13 +1,15 @@
 import {functions} from '../firebase/firebase';
-import {Platform} from 'react-native';
+import * as RNLocalize from "react-native-localize";
 
 export const createCall = async values => {
   try {
+    const currentLocale = RNLocalize.getLocales();
     const result = await functions.newCall({
       name: values.personName,
       phone: values.phone,
       email: values.mail,
-      platform: 'web' 
+      lang: currentLocale[0].languageCode==='el'?'gr':currentLocale[0].languageCode,
+      platform: 'web',
     });
 
     if (!result || !result.data || !result.data.name) {

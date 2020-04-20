@@ -19,3 +19,4 @@
 - **6 ème étape :**: pod install
 - **7 ème étape :**: ouvrir le projet avec X-CODE puis ajouter dans le dossier ressources googloe_service.split
 - **8 ème étape :**: à partir de x-code lancer l'application.
+
