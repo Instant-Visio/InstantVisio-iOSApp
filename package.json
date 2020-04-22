@@ -1,6 +1,6 @@
 {
   "name": "instantvisio",
-  "version": "1.0.1",
+  "version": "1.0.10",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
