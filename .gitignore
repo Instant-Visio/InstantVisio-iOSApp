@@ -60,3 +60,5 @@ buck-out/
 /ios/Pods/
 
 src-ui/global/config/firebase-config.js
+
+android/app/google-services.json
