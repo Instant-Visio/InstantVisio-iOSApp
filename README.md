@@ -1,5 +1,8 @@
 # INSTANT-VISIO
 
+This is an React Native mobile app for Android & iOS of [instantvisio.com](instantviso.com). 
+You can find the Web app [here](https://github.com/Instant-Visio/InstantVisio-WebApp/)
+
 #### 1. RUN APP in ANDROID
 
 - **1 ère étape :**: ouvrir l'application dans éditeur de code sur mac/window/linux exemple : Visual studio(telecharger sur internet) , installer node et npm en fin installer react-native.
