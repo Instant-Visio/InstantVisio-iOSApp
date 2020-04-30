@@ -2,8 +2,6 @@ import Config from './../config';
 import {Platform} from 'react-native';
 import firebase from '@react-native-firebase/app';
 import '@react-native-firebase/functions';
-import '@react-native-firebase/auth';
-import '@react-native-firebase/remote-config';
 import '@react-native-firebase/analytics';
 
 //pluck values from your 'google-services.json' you created on the firebase console
@@ -41,11 +39,6 @@ firebase.apps.length !== 0
       // use platform specific firebase config
       Platform.OS === 'ios' ? iosConfig : androidConfig,
 );
-
-export const remoteConfig = firebase.remoteConfig();
-remoteConfig.settings = {
-  minimumFetchIntervalMillis: 3600000,
-};
 
 if (Config.ENV === 'dev') {
   firebase.functions().useFunctionsEmulator('http://localhost:5000');

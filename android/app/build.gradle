@@ -135,8 +135,8 @@ android {
         applicationId "com.instantvisio"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 8
-        versionName "1.0.14"
+        versionCode 9
+        versionName "1.0.15"
         multiDexEnabled true
         resValue "string", "build_config_package", "com.instantvisio"
     }
@@ -202,6 +202,8 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation 'com.google.firebase:firebase-analytics:17.2.2'
     implementation 'com.google.firebase:firebase-functions:19.0.2'
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
