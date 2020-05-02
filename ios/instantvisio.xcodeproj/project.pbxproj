@@ -777,7 +777,7 @@
 			baseConfigurationReference = 33ED3141A2DC0BE6BE3CBA5A /* Pods-instantvisio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 2Y47G56B56;
 				INFOPLIST_FILE = instantvisio/Info.plist;
@@ -798,7 +798,7 @@
 			baseConfigurationReference = 09309F71D65F2C88E5B62619 /* Pods-instantvisio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 2Y47G56B56;
 				INFOPLIST_FILE = instantvisio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
