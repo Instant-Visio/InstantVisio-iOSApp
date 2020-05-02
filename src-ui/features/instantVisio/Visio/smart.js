@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import Orientation from 'react-native-orientation';
 import { BackHandler } from 'react-native';
 import Dumb from './dumb';
 

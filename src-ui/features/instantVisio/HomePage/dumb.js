@@ -1,7 +1,5 @@
 import React from 'react';
-import {ScrollView, Image, TouchableOpacity, View, Modal} from 'react-native';
-import {Spinner} from 'native-base';
-import data from './../../../global/static/data.json'
+import {ScrollView, Image, TouchableOpacity, View, Modal,ActivityIndicator} from 'react-native';
 import {
   Block,
   Input,
@@ -192,7 +190,7 @@ const Dump = ({
 
     <Modal transparent visible={loading}>
       <View style={[style.center, style.ApiModalLoader]}>
-        <Spinner color={theme.COLORS.WARNING} size="large" />
+        <ActivityIndicator size="large" color={theme.COLORS.WARNING} />
       </View>
     </Modal>
     <ModalUtils
