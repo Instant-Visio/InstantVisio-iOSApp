@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Alert, Platform} from 'react-native';
+import Config from 'react-native-config';
 import {createCall} from './../../../global/actions/createCall';
 import {
   InputCheckeremail,
@@ -71,7 +72,7 @@ class Smart extends Component {
         this.setState({error: false});
       })
       .catch(err => {
-        Alert.alert(i18nString('errorTitle'), i18nString('errorCall'), [
+        Alert.alert(i18nString('errorTitle'), Config.ENV==='dev'?'function Call return : '+err : i18nString('errorCall'), [
           {
             text: i18nString('btnTry'),
             onPress: () => console.log(err),
