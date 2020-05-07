@@ -6,9 +6,12 @@ const Dump = ({navigation, videoCallIdProps}) => (
     {/** tu peux l'utiliser ici egalement**/}
     <WebView
       style={{flex:1}}
-      source={{uri: `https://instantvisio.daily.co/${videoCallIdProps}`}}
-      /* Does not store any data within the lifetime of the WebView. */
-      // incognito={true}
+      source={{uri: `https://instantvisio.com/visio/${videoCallIdProps}`}}
+      mediaPlaybackRequiresUserAction={false}
+      domStorageEnabled={true}
+      thirdPartyCookiesEnabled={true}
+      allowsInlineMediaPlayback={true}
+      cacheEnabled={false}
     />
   </>
 );
