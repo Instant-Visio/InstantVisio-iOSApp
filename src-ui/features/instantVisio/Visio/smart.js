@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {Share} from 'react-native';
-import { BackHandler } from 'react-native';
+import {Share,BackHandler} from 'react-native';
+import {i18nString} from './../../../global/i18n';
+
 import Dumb from './dumb';
 
 class Smart extends Component {
@@ -32,8 +33,9 @@ class Smart extends Component {
   sharedLink = async () => {
     try {
       const result = await Share.share({
-        message:
-          'Bonjour, je vous invite à une conversation vidéo. Rejoignez maintenant la conversation sur ce lien :'+`${'https://instantvisio.com/visio/'}${this.props.videoCallIdProps}`,
+        message: 
+        
+          `${i18nString('messageShare')}${'https://instantvisio.com/visio/'}${this.props.videoCallIdProps}`,
       },{
         dialogTitle: 'Share Today',
         excludedActivityTypes: [

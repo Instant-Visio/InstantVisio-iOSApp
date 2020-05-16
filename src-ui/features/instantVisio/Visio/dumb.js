@@ -1,6 +1,7 @@
 import React from 'react';
 import WebView from 'react-native-webview';
 import {FabSwipeMenu} from './../../../global/components/Socles';
+import {i18nString} from './../../../global/i18n';
 
 const Dump = ({navigation, videoCallIdProps,sharedLink}) => (
   <>
@@ -11,7 +12,7 @@ const Dump = ({navigation, videoCallIdProps,sharedLink}) => (
       /* Does not store any data within the lifetime of the WebView. */
       // incognito={true}
     />
-    <FabSwipeMenu sharedLink={sharedLink}/>
+    <FabSwipeMenu btnTitle={i18nString('btnShare')} sharedLink={sharedLink}/>
   </>
 );
 

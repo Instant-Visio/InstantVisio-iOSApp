@@ -119,7 +119,7 @@ export default class FabSwipeMenu extends React.Component {
           )}
           <Button onPress={()=>this.props.sharedLink()} style={styles.fabOpenIcon}>
             <Text style={{fontSize: 12, color: 'rgb(256,256,256)'}}>
-             Partager
+             {this.props.btnTitle}
             </Text>
           </Button>
         </Animated.View>
