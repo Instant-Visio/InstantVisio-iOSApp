@@ -360,6 +360,8 @@
             "MenuML":"Legal mentions",
             "MenuDP":"Personal data",
             "MenuUS":"About us",
-            "BtnCancel":"Cancel"
+            "BtnCancel":"Cancel",
+            "btnShare":"Share",
+            "messageShare":"Hello, I invite you to a video chat. Join the conversation now on this link:"
         }
 }

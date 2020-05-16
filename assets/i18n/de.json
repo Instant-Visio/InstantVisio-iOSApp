@@ -360,6 +360,8 @@
             "MenuML":"Rechtliche Hinweise",
             "MenuDP":"Personenbezogene Daten",
             "MenuUS":"Über uns",
-            "BtnCancel":"Abbrechen"
+            "BtnCancel":"Abbrechen",
+            "btnShare":"Teilen",
+            "messageShare":"Hallo, ich lade dich zu einem Video-Chat ein. Nehmen Sie über diesen Link an der Unterhaltung teil:"
         }
 }

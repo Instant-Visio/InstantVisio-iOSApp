@@ -18,6 +18,7 @@ import Text from './Text';
 import Toast from './Toast';
 import Modals from './Modals';
 import ModalUtils from './ModalUtils';
+import FabSwipeMenu from './fab';
 
 
 import theme, { withSocle, SocleProvider } from './theme';
@@ -42,5 +43,6 @@ export {
   withSocle,
   SocleProvider,
   Modals,
-  ModalUtils
+  ModalUtils,
+  FabSwipeMenu
 };

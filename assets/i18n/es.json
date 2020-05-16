@@ -360,6 +360,8 @@
             "MenuML":"Menciones legales",
             "MenuDP":"Datos personales",
             "MenuUS":"A propósito de nosotros",
-            "BtnCancel":"Anular"
+            "BtnCancel":"Anular",
+            "btnShare":"Compartir",
+            "messageShare":"Hola, los invito a un video chat. Únase a la conversación ahora en este enlace:"
         }
 }

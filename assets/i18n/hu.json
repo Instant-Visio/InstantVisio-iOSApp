@@ -360,6 +360,8 @@
             "MenuML":"Jogi közlemények",
             "MenuDP":"Személyes adatok",
             "MenuUS":"Rólunk",
-            "BtnCancel":"Megszünteti"
+            "BtnCancel":"Megszünteti",
+            "btnShare":"Ossza meg",
+            "messageShare":"Üdvözlet, meghívlak egy videocsevegésre. Csatlakozzon a beszélgetéshez ezen a linken:"
         }
 }

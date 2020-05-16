@@ -360,6 +360,8 @@
             "MenuML":"Mențiuni legale",
             "MenuDP":"Date personale",
             "MenuUS":"Despre noi",
-            "BtnCancel":"Anula"
+            "BtnCancel":"Anula",
+            "btnShare":"Acțiune",
+            "messageShare":"Buna ziua, te invit la un video chat. Alăturați-vă conversației pe acest link:"
         }
 }

@@ -360,6 +360,8 @@
             "MenuML":"Mentions légales",
             "MenuDP":"Données Personnelles",
             "MenuUS":"À propos de nous",
-            "BtnCancel":"Annuler"
+            "BtnCancel":"Annuler",
+            "btnShare":"Partager",
+            "messageShare":"Bonjour, je vous invite à une conversation vidéo. Rejoignez maintenant la conversation sur ce lien :"
         }
 }

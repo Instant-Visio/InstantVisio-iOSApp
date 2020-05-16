@@ -360,6 +360,8 @@
             "MenuML":"Note Legali",
             "MenuDP":"Dati personali",
             "MenuUS":"Su di noi",
-            "BtnCancel":"Annullare"
+            "BtnCancel":"Annullare",
+            "btnShare":"suddividere",
+            "messageShare":"Ciao, ti invito a una chat video. Partecipa alla conversazione su questo link:"
         }
 }
